@@ -1,0 +1,38 @@
+<app-header [title]="title"></app-header> -->
+
+<p>diet-list works!</p>
+<div class="container-search">
+    <form action="">
+        <input class="different" type="text" placeholder="SEARCH ANY FOOD FROM THE DATABASE" name="searchbar">
+        <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+</div>
+<br><br>
+
+<div class="container">
+    <!-- when buiding frontend, please add functionality for dietList by creating model and repo which is called in the component.ts -->
+    <tr *ngFor="let list of dietList">
+
+    <div class="row">
+        <div class="card">
+            <div class="card-horizontal">
+                <img class="card-img-top" src="<%=list[i].image %>" alt="Card image cap">
+                <div class="card-block">
+                    <h4 class="card-title"><%=list[i].name %></h4>
+                    <p class="card-text"><%=list[i].description %></p>
+                    <small class="text-muted"><%=list[i].calories %></small>
+                    <br><br>
+                    <a href="#" class="button">Add to Plan</a>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div>
+
+
+<!-- <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="script.js"></script> -->
+
+<app-footer></app-footer>
+
+ 
