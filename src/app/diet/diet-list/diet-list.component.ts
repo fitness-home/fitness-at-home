@@ -6,13 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./diet-list.component.scss']
 })
 export class DietListComponent implements OnInit {
-  title='Diet Page';
+
   constructor() { }
 
-  get dietList(){
-
-  }       
-  
   ngOnInit(): void {
   }
 

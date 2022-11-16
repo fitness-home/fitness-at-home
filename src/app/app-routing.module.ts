@@ -9,6 +9,7 @@ import {ExpertListComponent} from "./expert/expert-list/expert-list.component";
 import {DietPlanComponent} from "./diet/diet-plan/diet-plan.component";
 import {ExercisePlanComponent} from "./exercise/exercise-plan/exercise-plan.component";
 import {AboutComponent} from "./about/about.component";
+import {Survey1Component} from "./survey/survey1/survey1.component";
 
 const routes: Routes = [
   {path: "", component: LandingComponent},
@@ -18,7 +19,8 @@ const routes: Routes = [
   {path: "exercise", component: ExerciseListComponent},
   {path: "exercisePlan", component: ExercisePlanComponent},
   {path: "expert", component: ExpertListComponent},
-  {path: "about", component: AboutComponent}
+  {path: "about", component: AboutComponent},
+  {path: "survey", component: Survey1Component}
 ];
 
 @NgModule({
