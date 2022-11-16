@@ -4,35 +4,34 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
-import { RegistrationComponent } from './auth/registration/registration.component';
-import { ExerciseListComponent } from './exercise/exercise-list/exercise-list.component';
-import { ExercisePlanComponent } from './exercise/exercise-plan/exercise-plan.component';
-import { DietPlanComponent } from './diet/diet-plan/diet-plan.component';
-import { DietListComponent } from './diet/diet-list/diet-list.component';
-import { ExpertListComponent } from './expert/expert-list/expert-list.component';
-import { ExpertDetailComponent } from './expert/expert-detail/expert-detail.component';
 import { AboutComponent } from './about/about.component';
-import { HeaderComponent } from './shared/header/header.component';
-import { FooterComponent } from './shared/footer/footer.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
+import { Survey1Component } from './survey/survey1/survey1.component';
+import {AuthModule} from "./auth/auth.module";
+import {DietModule} from "./diet/diet.module";
+import {ExerciseModule} from "./exercise/exercise.module";
+import {ExpertModule} from "./expert/expert.module";
+import {SharedModule} from "./shared/shared.module";
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingComponent,
-    RegistrationComponent,
-    ExerciseListComponent,
-    ExercisePlanComponent,
-    DietPlanComponent,
-    DietListComponent,
-    ExpertListComponent,
-    ExpertDetailComponent,
     AboutComponent,
-    HeaderComponent,
-    FooterComponent
+    Survey1Component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule,
+    AuthModule,
+    DietModule,
+    ExerciseModule,
+    ExpertModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
