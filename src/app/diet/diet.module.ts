@@ -6,11 +6,8 @@ import {DietPlanComponent} from "./diet-plan/diet-plan.component";
 import {DietListComponent} from "./diet-list/diet-list.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
-<<<<<<< HEAD
-=======
 import {SharedModule} from "../shared/shared.module";
 
->>>>>>> abass_frontend
 
 
 @NgModule({
@@ -21,10 +18,7 @@ import {SharedModule} from "../shared/shared.module";
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-<<<<<<< HEAD
-=======
     SharedModule,
->>>>>>> abass_frontend
   ]
 })
 export class DietModule { }

@@ -3,11 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-<<<<<<< HEAD
-import { LandingComponent } from './landing/landing.component';
-=======
 import { LandingModule } from './landing/landing.module';
->>>>>>> abass_frontend
 import { AboutComponent } from './about/about.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
@@ -21,10 +17,6 @@ import {SharedModule} from "./shared/shared.module";
 @NgModule({
   declarations: [
     AppComponent,
-<<<<<<< HEAD
-    LandingComponent,
-=======
->>>>>>> abass_frontend
     AboutComponent,
     Survey1Component
   ],
@@ -38,12 +30,8 @@ import {SharedModule} from "./shared/shared.module";
     DietModule,
     ExerciseModule,
     ExpertModule,
-<<<<<<< HEAD
-    SharedModule
-=======
     SharedModule,
     LandingModule,
->>>>>>> abass_frontend
   ],
   providers: [],
   bootstrap: [AppComponent]
