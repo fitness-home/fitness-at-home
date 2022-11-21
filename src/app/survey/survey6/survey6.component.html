@@ -1,44 +1,50 @@
-<p> This is Chohee and this is page for question6</p>
-<p> -- Header part -- </p>
 <html>
-<head>
-    <meta charset="UTF-8" />
-    <title>block, inline, inline-block</title>
-    <style>
+    <header>
+        <p> -- Header part -- </p>
+    </header>
+    <head>
+        <meta charset="UTF-8" />
+        <title>block, inline, inline-block</title>
+        <style>
         body {
             padding: 0;
-            margin: 0;
+            margin: 0 auto;
         }
         .block1 {
             text-align: center;
             line-height: 100px;
             font-size: x-large;
             width: 500px;
-            height: 250px;
+            height: 500px;
             background-color: lightgray;
             margin: 0 auto;
         }
         .block1 button {
             position: relative;
             padding: 15px 30px;
-            top: 140px;
+            left: 190px;
             display: block;
             background-color: #A3C6FB;
             border: 0;
             border-radius: 10px;
             outline: 0;
+            margin: 0px o;
         }
     </style>
 </head>
 <body>
-    <div class="block1">Question 6</div>
+    <div class="block1" style=" height: auto;"><h2>Question 6</h2></div>
     <div class="block1">
-      <div style="display: inline-block">
-        <button type="button" onClick="location.href='survey5.component.html'">BACK</button></div>
-      <div style="display: inline-block">
-      <button type="button">NEXT</button>
-      </div>
-    </div>
-</body>
-<p> -- Footer Part --</p>
-</html>
+        <form>
+            &nbsp;
+            <h2> How long do you want to reach your goal? </h2>
+            <input type="text" placeholder="Enter the Deadline" style="width: 300px; height: 30px;">
+        </form>
+        <div style="display: inline-block">
+            <button type="button" onClick="location.href='survey5.component.html'">BACK</button></div>
+            <div style="display: inline-block">
+                <button type="button">NEXT</button>
+            </div>
+        </body>
+        <footer></footer>
+        </html>
