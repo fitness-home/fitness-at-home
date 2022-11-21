@@ -12,43 +12,21 @@
   </p>
   <h1>CUSTOMIZED DIET PLAN</h1>
 </div>
-<form action="post">
+<div *ngFor="let diet of dietList">
   <div class="base row algn">
     <span class="mg">
-      <img src="\assets\istockphoto-609044534-612x612.jpg" id="img1" />
+      <img [src]="diet.image" id="img1" />
     </span>
     <span class="mg2">
-      <h2>PEANUT BUTTER BREAKFAST COOKIES</h2>
-      <p>Caories:290</p>
+      <h2>{{diet.name}}</h2>
+      <p>{{diet.description}}</p>
+      <p>Calories:{{diet.calories}}</p>
       <input  class="btn_complete" type="submit" value="Completed" />
       <i class="fa-solid fa-square-heart"></i>
     </span>
   </div>
   <br />
 
-  <div class="base row algn">
-    <span class="mg">
-      <img src="\assets\images.jpg" id="img1" />
-    </span>
-    <span class="mg2">
-      <h2>KIDNEY BEAN SALAD WITH BLUEBARY SMOOTHIE</h2>
-      <p>Caories:200</p>
-      <input class="btn_complete" type="submit" value="Completed" />
-      <i class="fa-solid fa-square-heart"></i>
-    </span>
   </div>
-  <br />
-  <div class="base row algn">
-    <span class="mg">
-      <img src="\assets\avacado.jpg" id="img1" />
-    </span>
-    <span class="mg2">
-      <h2>AVACADO TACOS</h2>
-      <p>Caories:150</p>
-      <input class="btn_complete" type="submit" value="Completed" />
-      <i class="fa-solid fa-square-heart"></i>
-    </span>
-  </div>
-</form>
 
 <input class="view" type="submit" value="View diet plans" />
