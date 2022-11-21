@@ -9,6 +9,9 @@ export class DietPlanComponent implements OnInit {
 
   constructor() { }
 
+    fakeArray = new Array(12);
+
+
   ngOnInit(): void {
   }
 
