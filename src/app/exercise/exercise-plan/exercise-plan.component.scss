@@ -1,0 +1,48 @@
+.search {
+    position: relative;
+    width: 300px;
+  }
+  
+  input {
+    width: 250%;
+    border: 1px solid lightgray;
+    background-color: lightgray;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 14px;
+    margin: 0;
+  }
+  
+  img {
+    position : absolute;
+    width: 17px;
+    top: 10px;
+    left: 12px;
+    margin: 0;
+  }
+  * {
+    font-family: "verdana" !important;
+}
+body {
+    position: relative;
+    width: 800px;
+    border: 10px;
+    padding: 150px;
+    margin: 0 auto;
+  }
+  form{
+    position: relative;
+    width: 650px;
+    border: 10px solid lightgray;
+    padding: 50px;
+    margin: 0 auto;
+  }
+  button {
+    position: relative;
+    padding: 15px 50px;
+    display: block;
+    background-color: #A3C6FB;
+    border: 0;
+    border-radius: 10px;
+    outline: 0;
+}
