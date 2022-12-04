@@ -13,4 +13,8 @@ export class ExerciseService {
   getExerciseList(): Observable<Object> {
     return this.http.get(`${environment.apiUrl}/exercise`);
   }
+
+  getExercisePlan(): Observable<Object> {
+    return this.http.get(`${environment.apiUrl}/plan/all`);
+  }
 }

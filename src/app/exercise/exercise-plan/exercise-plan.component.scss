@@ -1,0 +1,82 @@
+body{
+  margin: auto;
+  padding: 50px;
+  font-family: 'Lexend Deca', sans-serif;
+  color: #2E475D;
+  text-align: center;
+
+}
+.container{
+  max-width: 500px;
+  margin: auto;
+  align-items: center;
+}
+.card-horizontal {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  margin-bottom: 4rem;
+  padding: 0%;
+}
+.card{
+  margin-bottom:4rem;
+  background-color:dimgray;
+  padding:2rem;
+  height:auto;
+  width:100%;
+  color:#0a3155;
+}
+
+.responsive {
+  width: 70%;
+  height: auto;
+
+}
+.card-block{
+  margin: 1rem;
+}
+.card-img-top{
+  width:50%;
+  height:auto;
+}
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #7aa8b7;
+  border-radius: 6px;
+  outline: none;
+  margin-left: 40px;
+}
+.container-search {
+  margin-top: 5%;
+}
+.container-search input[type=text]{
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+  font-size: 16px;
+  width: 30vw;
+}
+.container-search button[type=submit]{
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+.card-title{
+  font-weight:bolder;
+  text-align: center;
+  font-size: larger;
+}
+.text-muted{
+  font-weight:bold;
+  text-align: center;
+}
+.card-block{
+  text-align: center;
+}

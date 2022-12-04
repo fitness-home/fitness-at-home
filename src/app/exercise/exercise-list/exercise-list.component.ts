@@ -19,7 +19,6 @@ export class ExerciseListComponent implements OnInit {
   onGetExerciseList() {
     this.exerciseService.getExerciseList().subscribe((res) =>  {
       this.exerciseList = res;
-      console.log("diet", this.exerciseList);
     })
   }
 
