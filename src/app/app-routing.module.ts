@@ -10,10 +10,12 @@ import {DietPlanComponent} from "./diet/diet-plan/diet-plan.component";
 import {ExercisePlanComponent} from "./exercise/exercise-plan/exercise-plan.component";
 import {AboutComponent} from "./about/about.component";
 import {Survey1Component} from "./survey/survey1/survey1.component";
+import {SigninComponent} from "./auth/signin/signin.component";
 
 const routes: Routes = [
   {path: "", component: LandingComponent},
   {path: "signup", component: RegistrationComponent},
+  {path: "signin", component: SigninComponent},
   {path: "diet", component: DietListComponent},
   {path: "dietPlan", component: DietPlanComponent},
   {path: "exercise", component: ExerciseListComponent},
