@@ -3,7 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  apiUrl: "https://fitness-at-home-backend.herokuapp.com",
+  apiUrl: "http://localhost:5000",
   production: false
 };
 

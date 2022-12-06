@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ExerciseService} from "../exercise.service";
 
 @Component({
   selector: 'app-exercise-plan',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./exercise-plan.component.scss']
 })
 export class ExercisePlanComponent implements OnInit {
-
-  constructor() { }
+  exercisePlan: any;
+  constructor(public exerciseService: ExerciseService) { }
 
   ngOnInit(): void {
+    this.onGetExercisePlan();
   }
 
+  onGetExercisePlan() {
+    this.exerciseService.getExercisePlan().subscribe((res) =>  {
+      this.exercisePlan = res;
+    })
+  }
 }
