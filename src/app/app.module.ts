@@ -13,12 +13,14 @@ import {DietModule} from "./diet/diet.module";
 import {ExerciseModule} from "./exercise/exercise.module";
 import {ExpertModule} from "./expert/expert.module";
 import {SharedModule} from "./shared/shared.module";
+import { ProgressComponent } from './progress/progress.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
-    Survey1Component
+    Survey1Component,
+    ProgressComponent
   ],
   imports: [
     BrowserModule,

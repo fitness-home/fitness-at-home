@@ -6,10 +6,11 @@ import {ExerciseListComponent} from "./exercise-list/exercise-list.component";
 import {ExercisePlanComponent} from "./exercise-plan/exercise-plan.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
+import { AdminExerciseComponent } from './admin-exercise/admin-exercise.component';
 
 
 @NgModule({
-  declarations: [ExerciseListComponent, ExercisePlanComponent,],
+  declarations: [ExerciseListComponent, ExercisePlanComponent, AdminExerciseComponent,],
   imports: [
     CommonModule,
     ExerciseRoutingModule,

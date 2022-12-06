@@ -7,7 +7,7 @@
      results you want! We offer many different diets to guide you to live fit. If
      you want to add new diet on your own schedule, search it and add it in to
      the your plan.we have the plan for you!-->
-  
+
   <p>
     Instruction statement:Below is the list of customized diet plan .Click
     'Add to plan' if you wish to add in your exercise plan.
@@ -22,7 +22,8 @@
       <h2>{{exercise.name}}</h2>
       <p>{{exercise.description}}</p>
       <p>Calories:{{exercise.calories}}</p>
-      <input  class="btn_complete" type="submit" value="Add to Plan" />
+       <button routerLink="/exercisePlan" class="btn_complete">Add to Plan</button>
+      <button routerLink="/exerciseDiet" class="btn_complete">Edit</button>
       <i class="fa-solid fa-square-heart"></i>
     </span>
   </div>
