@@ -1,44 +1,49 @@
-<html>
-    <header>
-    </header>
-    <body>
-    <div class="search">
-        <input type="text" placeholder="       SEARCH ANY FOOD FROM THE DATABASE">
-        <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png">
-        &nbsp;
-        <form>
-            <input type="image" src="C:\Users\nocho\Downloads\exercise.jfif" style="float: left; width: 300px;; height: 300px;; margin-right: 20px; margin-bottom: 10px; ">
-            <h1>EXERCISE NAME</h1>
-            <h4>Exercise Description XXXX XX</h4>
-            <h4>XXXXXXXXXXXXXXXXXXXXXX</h4>
-            <h4>XXXXXXXXXXXXXXXXXXXXXX</h4>
-            <h4>XXXXXXXXXXXXXXXXXXXXXX</h4>
-            <h4><i><b>XXX HOURS PER DAY</b><script src=""></script></i></h4>
-            <button type="add" class="btn"><b>ADD TO PLAN</b></button>
-          </form>
-          &nbsp;
-          <form>
-            <input type="image" src="C:\Users\nocho\Downloads\exercise.jfif" style="float: left; width: 300px;; height: 300px;; margin-right: 20px; margin-bottom: 10px; ">
-            <h1>EXERCISE NAME</h1>
-            <h4>Exercise Description XXXX XX</h4>
-            <h4>XXXXXXXXXXXXXXXXXXXXXX</h4>
-            <h4>XXXXXXXXXXXXXXXXXXXXXX</h4>
-            <h4>XXXXXXXXXXXXXXXXXXXXXX</h4>
-            <h4><i><b>XXX HOURS PER DAY</b><script src=""></script></i></h4>
-            <button type="add" class="btn"><b>ADD TO PLAN</b></button>
-          </form>
-          &nbsp;
-          <form>
-            <input type="image" src="C:\Users\nocho\Downloads\exercise.jfif" style="float: left; width: 300px;; height: 300px;; margin-right: 20px; margin-bottom: 10px; ">
-            <h1>EXERCISE NAME</h1>
-            <h4>Exercise Description XXXX XX</h4>
-            <h4>XXXXXXXXXXXXXXXXXXXXXX</h4>
-            <h4>XXXXXXXXXXXXXXXXXXXXXX</h4>
-            <h4>XXXXXXXXXXXXXXXXXXXXXX</h4>
-            <h4><i><b>XXX HOURS PER DAY</b><script src=""></script></i></h4>
-            <button type="add" class="btn"><b>ADD TO PLAN</b></button>
-          </form>
-    </div>
-    </body>
-<footer><p> -- Footer part -- </p></footer>
-</html>
+<body>
+<div class="container-intro">
+  <!-- when buiding frontend, please replace user with with apppropriate logged in user's name -->
+  <!-- <h1>Hi <%= user %>!!</h1> -->
+  <h1>Hi Nisha!!</h1>
+  <p>Welcome to Fitness@Home App. Here is your personalised plan</p>
+  <p><span>Instruction: </span>Below is a list of customised exercise plan.
+    Click "Completed when you complete the exercise for the day.</p>
+  <br><br>
+  <h2>CUSTOMISED DIET PLAN</h2>
+
+</div>
+<div class="container">
+
+
+  <!-- when buiding frontend, please change dietList to plan-dietList. As of now the plan list is not created -->
+  <!-- <tr *ngFor="let list of dietList"> -->
+
+  <div class="row">
+    <tr *ngFor="let plan of exercisePlan">
+      <div class="card">
+        <div class="card-horizontal">
+          <img class="card-img-top" src="\assets\images.jpg" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title">Healthy Salad</h4>
+            <p class="card-text">This diet is perfect for loose weight whilst feeling full</p>
+            <small class="text-muted">600 calories per serving</small>
+            <br><br>
+            <a href="#" class="button">COMPLETED</a>
+          </div>
+
+          <!-- ******************frontend code************************** -->
+          <!-- <img class="card-img-top" src="<%=list[i].image %>" alt="Card image cap">
+          <div class="card-block">
+              <h4 class="card-title"><%=list[i].name %></h4>
+              <p class="card-text"><%=list[i].description %></p>
+              <small class="text-muted"><%=list[i].calories %></small>
+              <br><br>
+              <a href="#" class="button">COMPLETED</a>
+          </div> -->
+        </div>
+
+
+      </div>
+  </div>
+
+</div>
+</body>
+

@@ -1,0 +1,47 @@
+.member-login{
+    background-color: gainsboro;
+    width: 35%;
+    height: 55vh;
+    margin: auto;
+    margin-top: 4%;
+    text-align: center;
+    padding: 2% 0 0 0;
+}
+.member-login >div h2{
+    margin-bottom: 30px;
+}
+.member-login >div input{
+  margin: 20px 0;
+   width: 65%;
+   height: 35px;
+   background-color: rgb(247, 241, 241);
+   border: none;
+   padding: 0 5px;
+}
+
+.member-login >div button{
+    margin: 15px 0;
+    width: 50%;
+    height: 40px;
+    border: gainsboro;
+    border-radius: 15px;
+    font-weight:1000;
+    font-size: 1.5em;
+    background-color: skyblue;
+    cursor: pointer;
+}
+.member-login >div button:hover{
+    background-color: rgb(173, 97, 245);
+    color: white;
+}
+.member-login a{
+    color: black;
+    font-size: 0.8em;
+}
+p{
+    text-align: center;
+    margin: 5px 0;
+}
+p>a{
+    color: black;
+}

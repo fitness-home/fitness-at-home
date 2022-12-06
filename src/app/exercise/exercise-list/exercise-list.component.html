@@ -1,1 +1,34 @@
-<p>exercise-list works!</p>
+<div class="content">
+  <h2>EXERCISE LIST</h2>
+  <div class="srerch">
+    <input type="text" placeholder="Search..">
+  </div>
+    <!--Fitnessapp is a unique fitness concept that was created to help you get the
+     results you want! We offer many different diets to guide you to live fit. If
+     you want to add new diet on your own schedule, search it and add it in to
+     the your plan.we have the plan for you!-->
+  
+  <p>
+    Instruction statement:Below is the list of customized diet plan .Click
+    'Add to plan' if you wish to add in your exercise plan.
+  </p>
+</div>
+<div *ngFor="let exercise of exerciseList">
+  <div class="base row algn">
+    <span class="mg">
+      <img [src]="exercise.image" id="img1" />
+    </span>
+    <span class="mg2">
+      <h2>{{exercise.name}}</h2>
+      <p>{{exercise.description}}</p>
+      <p>Calories:{{exercise.calories}}</p>
+      <input  class="btn_complete" type="submit" value="Add to Plan" />
+      <i class="fa-solid fa-square-heart"></i>
+    </span>
+  </div>
+  <br />
+
+</div>
+
+<button  class="view" routerLink="/exercisePlan"> View diet plans</button>
+
