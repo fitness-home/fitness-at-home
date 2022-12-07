@@ -32,6 +32,9 @@ export class RegistrationComponent implements OnInit {
     }
     this.authService.createUser(this.data)
       .subscribe(response => {
+        let user = {} as any;
+        user = response;
+        localStorage.setItem("user", user?._id);
         this.router.navigate(["/survey"]);
       })
   }

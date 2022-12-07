@@ -16,6 +16,11 @@ import {ProgressComponent} from "./progress/progress.component";
 import {ConsentFormComponent} from "./expert/consent-form/consent-form.component";
 import {AdminDietComponent} from "./diet/diet-list/admin-diet/admin-diet.component";
 import {AdminExerciseComponent} from "./exercise/admin-exercise/admin-exercise.component";
+import {Survey2Component} from "./survey/survey2/survey2.component";
+import {Survey3Component} from "./survey/survey3/survey3.component";
+import {Survey4Component} from "./survey/survey4/survey4.component";
+import {Survey5Component} from "./survey/survey5/survey5.component";
+import {Survey6Component} from "./survey/survey6/survey6.component";
 
 const routes: Routes = [
   {path: "", component: LandingComponent},
@@ -29,6 +34,11 @@ const routes: Routes = [
   {path: "expertDetail", component: ExpertDetailComponent},
   {path: "about", component: AboutComponent},
   {path: "survey", component: Survey1Component},
+  {path: "survey2", component: Survey2Component},
+  {path: "survey3", component: Survey3Component},
+  {path: "survey4", component: Survey4Component},
+  {path: "survey5", component: Survey5Component},
+  {path: "survey6", component: Survey6Component},
   {path: "progress", component: ProgressComponent},
   {path: "consent", component: ConsentFormComponent},
   {path: "adminDiet", component: AdminDietComponent},
