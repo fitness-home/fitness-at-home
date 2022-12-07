@@ -1,0 +1,46 @@
+.update-exercise{
+    background-color: gainsboro;
+    width: 35%;
+    height: 55vh;
+    margin: auto;
+    margin-top: 4%;
+    text-align: center;
+    padding: 2% 0 0 0;
+}
+.update{
+    display: flex;
+}
+.update-exercise >div h2{
+    margin-bottom: 30px;
+}
+.update-exercise >div input{
+  margin: 20px 10px;
+   width: 50%;
+   height: 35px;
+   background-color: rgb(247, 241, 241);
+   border: none;
+   padding: 0 5px;
+   
+}
+
+
+
+.update-exercise a{
+    color: black;
+    font-size: 0.8em;
+}
+p{
+    text-align: center;
+    margin: 5px 0;
+}
+p>a{
+    color: black;
+}
+
+.mg{
+    #img1 {
+        width: 200px;
+        height: 250px;
+        padding-left: 20px;
+    }
+  }
