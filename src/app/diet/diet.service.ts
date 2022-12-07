@@ -13,4 +13,8 @@ export class DietService {
   getDietList(): Observable<Object> {
     return this.http.get(`${environment.apiUrl}/diet`);
   }
+
+  onSearchDiet(searchData: any) : Observable<Object> {
+    return this.http.get(`${environment.apiUrl}/diet/search/` + searchData);
+  }
 }

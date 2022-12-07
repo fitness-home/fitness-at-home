@@ -1,8 +1,8 @@
 <div class="content">
   <h2>EXERCISE LIST</h2>
   <div class="search">
-    <input type="text" class="inpSearch" placeholder="Search..">
-    <button type="submit">Search</button>
+    <input type="text"  [(ngModel)]="searchValue" class="inpSearch" placeholder="Search..">
+    <button type="submit" (click)="onSearch(searchValue)">Search</button>
   </div>
     <!--Fitnessapp is a unique fitness concept that was created to help you get the
      results you want! We offer many different diets to guide you to live fit. If
@@ -17,13 +17,13 @@
 <div *ngFor="let exercise of exerciseList">
   <div class="base row algn">
     <span class="mg">
-      <img [src]="exercise.image" id="img1" />
+      <img [src]="exercise?.image" id="img1" />
     </span>
     <span class="mg2">
-      <h2>{{exercise.name}}</h2>
-      <p>{{exercise.description}}</p>
-      <p>Calories:{{exercise.calories}}</p>
-       <button routerLink="/exercisePlan" class="btn_complete">Add to Plan</button>
+      <h2>{{exercise?.name}}</h2>
+      <p>{{exercise?.description}}</p>
+      <p>Duration:{{exercise?.duration}}</p>
+      <button routerLink="/exercisePlan" class="btn_complete">Add to Plan</button>
       <button routerLink="/exerciseDiet" class="btn_complete">Edit</button>
       <i class="fa-solid fa-square-heart"></i>
     </span>

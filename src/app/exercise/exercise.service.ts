@@ -17,4 +17,8 @@ export class ExerciseService {
   getExercisePlan(): Observable<Object> {
     return this.http.get(`${environment.apiUrl}/plan/all`);
   }
+
+  onSearchExercise(searchData: any) : Observable<Object> {
+    return this.http.get(`${environment.apiUrl}/exercise/search/` + searchData);
+  }
 }

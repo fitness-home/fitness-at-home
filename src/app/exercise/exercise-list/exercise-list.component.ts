@@ -8,7 +8,7 @@ import {ExerciseService} from "../exercise.service";
   styleUrls: ['./exercise-list.component.scss']
 })
 export class ExerciseListComponent implements OnInit {
-
+  searchValue: any;
   exerciseList: any;
   constructor(public exerciseService: ExerciseService) { }
 
@@ -22,4 +22,13 @@ export class ExerciseListComponent implements OnInit {
     })
   }
 
+  onSearch(data: any) {
+    if(data) {
+      this.exerciseService.onSearchExercise(data).subscribe((res) =>  {
+        this.exerciseList = res;
+      })
+    } else {
+      this.onGetExerciseList();
+    }
+  }
 }

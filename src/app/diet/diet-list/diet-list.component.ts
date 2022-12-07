@@ -7,6 +7,7 @@ import {DietService} from "../diet.service";
   styleUrls: ['./diet-list.component.scss']
 })
 export class DietListComponent implements OnInit {
+  searchValue: any;
   dietList: any;
   constructor(public dietService: DietService) { }
 
@@ -19,6 +20,16 @@ export class DietListComponent implements OnInit {
       this.dietList = res;
       console.log("diet", this.dietList);
     })
+  }
+
+  onSearch(data: any) {
+    if(data) {
+      this.dietService.onSearchDiet(data).subscribe((res) =>  {
+        this.dietList = res;
+      })
+    } else {
+      this.onGetDietList();
+    }
   }
 
 }

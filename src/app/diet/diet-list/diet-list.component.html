@@ -3,8 +3,8 @@
   <h2>DIET LIST</h2>
 
   <div class="search">
-    <input type="text" class="inpSearch" placeholder="Search..">
-    <button type="submit">Search</button>
+    <input type="text"  [(ngModel)]="searchValue" class="inpSearch" placeholder="Search..">
+    <button type="submit" (click)="onSearch(searchValue)">Search</button>
   </div>
    <!--Fitnessapp is a unique fitness concept that was created to help you get the
     results you want! We offer many different diets to guide you to live fit. If
