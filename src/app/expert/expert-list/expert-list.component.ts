@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ExpertService} from "../expert.service";
 
 @Component({
   selector: 'app-expert-list',
@@ -6,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./expert-list.component.scss']
 })
 export class ExpertListComponent implements OnInit {
-
-  constructor() { }
+  expertList: any;
+  constructor(public expertService: ExpertService) { }
 
   ngOnInit(): void {
+    this.onGetDietList();
+  }
+
+  onGetDietList() {
+    this.expertService.getExpertList().subscribe((res) =>  {
+      this.expertList = res;
+      console.log("diet", this.expertList);
+    })
   }
 
 }

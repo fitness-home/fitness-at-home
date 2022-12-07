@@ -7,10 +7,11 @@ import {ExpertListComponent} from "./expert-list/expert-list.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { ConsentFormComponent } from './consent-form/consent-form.component';
+import { AdminExpertComponent } from './admin-expert/admin-expert.component';
 
 
 @NgModule({
-  declarations: [ExpertListComponent, ExpertDetailComponent, ConsentFormComponent,],
+  declarations: [ExpertListComponent, ExpertDetailComponent, ConsentFormComponent, AdminExpertComponent,],
   imports: [
     CommonModule,
     ExpertRoutingModule,

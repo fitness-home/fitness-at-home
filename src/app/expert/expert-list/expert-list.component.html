@@ -6,41 +6,19 @@
   </p>
   <h1>EXPERT LIST</h1>
 </div>
-<form action="post">
+<div  *ngFor="let expert of expertList">
   <div class="base row algn">
       <span class="mg">
-        <img src="\assets\download.jpg" id="img2" />
+        <img [src]="expert?.image" id="img2" />
       </span>
     <span class="mg2">
-        <h2>Expert Name:</h2>
-        <p>Expert Description:</p>
+        <h2>Expert Name:{{expert?.firstname}} {{expert?.lastname}}</h2>
+        <p>Expert Qualification:{{expert?.qualification}}</p>
+        <p>Expert Experience:{{expert?.experience}}</p>
+       <p>Expert Email:{{expert?.email}}</p>
       <button routerLink="/expertDetail" class="btn_connect">Connect </button>
-
       </span>
   </div>
   <br />
-
-  <div class="base row algn">
-      <span class="mg">
-        <img src="\assets\images.jpg" id="img1" />
-      </span>
-    <span class="mg2">
-        <h2>Expert Name:</h2>
-        <p>Expert Description:</p>
-        <input class="btn_connect" type="submit" value="Connect" />
-
-      </span>
-  </div>
-  <br />
-  <div class="base row algn">
-      <span class="mg">
-        <img src="\assets\avacado.jpg" id="img1" />
-      </span>
-    <span class="mg2">
-        <h2>Expert Name:</h2>
-        <input class="btn_connect" type="submit" value="Completed" />
-        <i class="fa-solid fa-square-heart"></i>
-      </span>
-  </div>
-</form>
+</div>
 
