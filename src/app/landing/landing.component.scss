@@ -46,20 +46,14 @@ nav a{
 /* -----------------------------------catchymsg-image------------------------------------- */
 
 .catchyMsg-image{
-   // display: flex;
-    padding: 2%;
+    display: flex;
+    padding: 2% 5%;
     height: 35vh;
-    width: 70%;
-    align-items: center;
-    margin: auto;
-   
+
 }
-
-
 
 .catchyMsg-image .catchyMsg{
    text-align: center;
-   justify-content: center;
 }
 
 .catchyMsg-image .catchyMsg button{
@@ -77,22 +71,16 @@ nav a{
 }
 
 .catchyMsg-image .image{
-    
-    
-    
+    width: 50%;
+    height: 100%;
+    background-color: antiquewhite;
     margin: 0 0;
-    margin-left: 0%;
+    margin-left: 25%;
  //   background: url("./images/demo-pic.jpg");
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center center;
-    justify-content: center;
-}
 
-.catchyMsg-image .image img{
-  height: 250px;
-  width: 900px;
-  justify-content: center;
 }
 
 /* -----------------------------------catchymsg-image-end------------------------------------- */
