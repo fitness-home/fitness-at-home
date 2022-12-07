@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import * as path from "path";
 import {RegistrationComponent} from "./auth/registration/registration.component";
+import {SigninComponent} from "./auth/signin/signin.component";
 import {LandingComponent} from "./landing/landing.component";
 import {DietListComponent} from "./diet/diet-list/diet-list.component";
 import {ExerciseListComponent} from "./exercise/exercise-list/exercise-list.component";

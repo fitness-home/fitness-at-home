@@ -10,6 +10,7 @@ export class ExercisePlanComponent implements OnInit {
   exercisePlan: any;
   constructor(public exerciseService: ExerciseService) { }
 
+  fakeArray = new Array(4);
   ngOnInit(): void {
     this.onGetExercisePlan();
   }
