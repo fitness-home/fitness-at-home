@@ -13,4 +13,9 @@ export class AuthService {
   createUser(user: any): Observable<Object> {
     return this.http.post(`${environment.apiUrl}/user`, user);
   }
+
+  getPlan(user: any): Observable<Object> {
+    let userData = {"user": user};
+    return this.http.post(`${environment.apiUrl}/plan/generate`, userData);
+  }
 }

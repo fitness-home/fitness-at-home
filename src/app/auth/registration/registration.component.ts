@@ -10,6 +10,7 @@ import {User} from "../../model/user.model";
 })
 export class RegistrationComponent implements OnInit {
   data?: User;
+  planId: any;
   constructor(public authService: AuthService,private router: Router) { }
 
   ngOnInit(): void {
@@ -35,6 +36,9 @@ export class RegistrationComponent implements OnInit {
         let user = {} as any;
         user = response;
         localStorage.setItem("user", user?._id);
+        this.authService.getPlan(user?._id).subscribe((res: any) =>  {
+         console.log("plan Generated");
+        })
         this.router.navigate(["/survey"]);
       })
   }

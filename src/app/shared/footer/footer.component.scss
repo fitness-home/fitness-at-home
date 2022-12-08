@@ -6,13 +6,12 @@
 }
 
 .footer{
-    margin-top: 150px;
+    margin-top: 10px;
     width: 100%;
     padding: 100px 15%;
     background: dimgray;;
     color: #efefef;
     display: flex;
-    
 }
 
 .footer div{
@@ -29,7 +28,7 @@
    height: 100%;
    width: 100%;
    transform: translateX(-20%);
-    
+
 }
 
 .footer div h3{
@@ -42,7 +41,7 @@
     text-decoration: none;
     color:#efefef;
     margin-bottom: 10px;
-    
+
 }
 form input{
     width: 400px;
@@ -73,14 +72,14 @@ form button{
     cursor: pointer;
 }
 /* BOTTOM-LINE */
-.bottom-line { 
-    background-color: #444554; 
+.bottom-line {
+    background-color: #444554;
     color: #fff;
     float: bottom;
     align-content: center;
     justify-content: center;
 }
 
-.bottom-line p { 
+.bottom-line p {
     margin-left: 35%;
 }

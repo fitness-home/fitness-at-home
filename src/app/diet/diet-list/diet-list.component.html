@@ -3,8 +3,8 @@
   <h2>DIET LIST</h2>
 
   <div class="search">
-    <input type="text" class="inpSearch" placeholder="Search..">
-    <button type="submit">Search</button>
+    <input type="text"  [(ngModel)]="searchValue" class="inpSearch" placeholder="Search..">
+    <button type="submit" (click)="onSearch(searchValue)">Search</button>
   </div>
    <!--Fitnessapp is a unique fitness concept that was created to help you get the
     results you want! We offer many different diets to guide you to live fit. If
@@ -25,8 +25,8 @@
       <h2>{{diet.name}}</h2>
       <p>{{diet.description}}</p>
       <p>Calories:{{diet.calories}}</p>
-      <button routerLink="/dietPlan" class="btn_complete">Add to Plan</button>
-       <button routerLink="/adminDiet" class="btn_complete">Edit</button>
+      <button (click)="onAddToPlan(diet._id)" routerLink="/dietPlan" class="btn_complete">Add to Plan</button>
+       <button *ngIf="user === 'admin'" (click)="onEditDiet(diet)" class="btn_complete">Edit</button>
       <i class="fa-solid fa-square-heart"></i>
     </span>
   </div>
