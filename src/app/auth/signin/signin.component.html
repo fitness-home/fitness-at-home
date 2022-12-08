@@ -1,12 +1,18 @@
-
+<div
+    class="bg-danger mt-2 p-2 text-center text-white"
+    *ngIf="message != null">
+    {{ message }}
+</div>
+<form novalidate #form="ngForm" (ngSubmit)="authenticate(form)">
 
     <div class="member-login">
         <div>
         <h2>MEMBER LOGIN</h2>
-        <input type="text" placeholder="Enter Your Username" /><br/>
-        <input type="text" placeholder="Enter Your Password" /><br/>
-        <button class="login-btn">LOGIN</button><br/>
+        <input type="text"name="username" [(ngModel)]="username" placeholder="Enter Your Username" /><br/>
+        <input type="text"  name="password" [(ngModel)]="password" placeholder="Enter Your Password" /><br/>
+        <button type="submit" class="login-btn">LOGIN</button><br/>
         </div>
         <a href="#">FORGOT PASSWORD?</a>
     </div>
     <P>Not a member yet? <a href=#><b>Register</b> Now!</a></P>
+</form>
