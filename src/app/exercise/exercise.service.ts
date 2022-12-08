@@ -15,7 +15,7 @@ export class ExerciseService {
   }
 
   getExercisePlan(user: any): Observable<Object> {
-    return this.http.post(`${environment.apiUrl}/plan/user`, user);
+    return this.http.get(`${environment.apiUrl}/plan/user/` + user);
   }
 
   onSearchExercise(searchData: any) : Observable<Object> {
@@ -24,5 +24,9 @@ export class ExerciseService {
 
   onUpdateExercise(data: any) : Observable<Object> {
     return this.http.post(`${environment.apiUrl}/exercise/update`, data);
+  }
+
+  onUpdatePlan(data: any) : Observable<Object> {
+    return this.http.post(`${environment.apiUrl}/plan/update`, data);
   }
 }

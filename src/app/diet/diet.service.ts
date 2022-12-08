@@ -21,4 +21,12 @@ export class DietService {
   onUpdateDiet(data: any) : Observable<Object> {
     return this.http.post(`${environment.apiUrl}/diet/update`, data);
   }
+
+  getDietPlan(user: any): Observable<Object> {
+    return this.http.get(`${environment.apiUrl}/plan/user/` + user);
+  }
+
+  onUpdatePlan(data: any) : Observable<Object> {
+    return this.http.post(`${environment.apiUrl}/plan/update`, data);
+  }
 }

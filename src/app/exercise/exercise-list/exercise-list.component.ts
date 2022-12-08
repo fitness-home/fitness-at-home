@@ -38,4 +38,11 @@ export class ExerciseListComponent implements OnInit {
   onEditExercise(exerciseData: any) {
     this.router.navigateByUrl('/adminExercise', {state: {id: exerciseData._id, name: exerciseData.name, description: exerciseData.description, duration: exerciseData.duration, image: exerciseData.image}} );
   }
+
+  onAddToPlan(id: any) {
+    let data= {"exercise": id, "plan": "63914735a516c6532099a174"};
+    this.exerciseService.onUpdatePlan(data).subscribe((res: any) =>  {
+      this.router.navigate(['dietPlan']);
+    })
+  }
 }

@@ -25,7 +25,7 @@
       <h2>{{diet.name}}</h2>
       <p>{{diet.description}}</p>
       <p>Calories:{{diet.calories}}</p>
-      <button routerLink="/dietPlan" class="btn_complete">Add to Plan</button>
+      <button (click)="onAddToPlan(diet._id)" routerLink="/dietPlan" class="btn_complete">Add to Plan</button>
        <button *ngIf="user === 'admin'" (click)="onEditDiet(diet)" class="btn_complete">Edit</button>
       <i class="fa-solid fa-square-heart"></i>
     </span>

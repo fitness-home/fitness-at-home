@@ -19,6 +19,7 @@ import {Survey3Component} from "./survey/survey3/survey3.component";
 import {Survey4Component} from "./survey/survey4/survey4.component";
 import {Survey5Component} from "./survey/survey5/survey5.component";
 import {Survey6Component} from "./survey/survey6/survey6.component";
+import { ReportComponent } from './progress/report/report.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import {Survey6Component} from "./survey/survey6/survey6.component";
     Survey4Component,
     Survey5Component,
     Survey6Component,
-    ProgressComponent
+    ProgressComponent,
+    ReportComponent
   ],
   imports: [
     BrowserModule,

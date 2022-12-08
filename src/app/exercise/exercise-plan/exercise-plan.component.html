@@ -1,9 +1,8 @@
-<p>exercise-plan works!</p>
 <body>
 <div class="container-intro">
   <!-- when buiding frontend, please replace user with with apppropriate logged in user's name -->
   <!-- <h1>Hi <%= user %>!!</h1> -->
-  <h1>Hi Nisha!!</h1>
+  <h1>Hi {{userName}}!!</h1>
   <p>Welcome to Fitness@Home App. Here is your personalised plan</p>
   <p><span>Instruction: </span>Below is a list of customised exercise plan.
     Click "Completed when you complete the exercise for the day.</p>
@@ -21,27 +20,16 @@
     <tr *ngFor="let plan of exercisePlan">
       <div class="card">
         <div class="card-horizontal">
-          <img class="card-img-top" src="\assets\images.jpg" alt="Card image cap">
+          <img class="card-img-top" [src]="plan?.image" alt="Card image cap">
           <div class="card-block">
-            <h4 class="card-title"></h4>
-            <p class="card-text">This diet is perfect for loose weight whilst feeling full</p>
-            <small class="text-muted">600 calories per serving</small>
+            <h4 class="card-title">{{plan?.name}}</h4>
+            <p class="card-text">{{plan?.description}}</p>
+            <small class="text-muted">{{plan?.duration}}</small>
             <br><br>
-            <a href="#" class="button">COMPLETED</a>
+            <a class="button">COMPLETED</a>
           </div>
 
-          <!-- ******************frontend code************************** -->
-          <!-- <img class="card-img-top" src="<%=list[i].image %>" alt="Card image cap">
-          <div class="card-block">
-              <h4 class="card-title"><%=list[i].name %></h4>
-              <p class="card-text"><%=list[i].description %></p>
-              <small class="text-muted"><%=list[i].calories %></small>
-              <br><br>
-              <a href="#" class="button">COMPLETED</a>
-          </div> -->
         </div>
-
-
       </div>
   </div>
 
