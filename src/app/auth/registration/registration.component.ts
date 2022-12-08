@@ -15,7 +15,7 @@ export class RegistrationComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addData(formData: any) { 
+  addData(formData: any) {
     this.data = {
       username: formData.value.username,
       email: formData.value.email,
