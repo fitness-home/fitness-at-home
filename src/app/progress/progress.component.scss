@@ -1,0 +1,56 @@
+.generate-PR{
+    background-color: gainsboro;
+    width: 35%;
+    height: 550px;
+    margin: auto;
+    margin-top: 4%;
+    text-align: center;
+    padding: 2% 0 0 0;
+    justify-content: center;
+}
+.update label{
+
+    text-align: left;
+    margin-left: 10px;
+}
+.generate-PR >div h2{
+    margin-bottom: 30px;
+}
+.generate-PR >div input{
+  margin: 20px;
+   width: 50%;
+   height: 35px;
+   background-color: rgb(247, 241, 241);
+   border: none;
+   padding: 0 5px;
+   
+}
+.generate-PR label {
+   // display: flex;
+   margin-left: 10px;
+   
+}
+
+
+.generate-PR >div .generate{
+    color: green;
+    width: 50px;
+}
+
+
+.generate-PR a{
+    color: black;
+    font-size: 0.8em;
+}
+p{
+    text-align: center;
+    margin: 5px 0;
+}
+p>a{
+    color: black;
+}
+.generate-PR button{
+    height: 30px;
+    margin-bottom: 500px;
+    background-color: green;
+}

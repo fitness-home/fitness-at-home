@@ -44,7 +44,10 @@ nav a{
 }
 /* -----------------------------------navbar-end------------------------------------- */
 /* -----------------------------------catchymsg-image------------------------------------- */
-
+.all{
+  background-color: rgb(239, 247, 211);
+  margin: 0px 0px;
+}
 .catchyMsg-image{
    // display: flex;
     padding: 2%;
@@ -52,10 +55,14 @@ nav a{
     width: 70%;
     align-items: center;
     margin: auto;
+    margin-top: 20px;
+   
    
 }
 
-
+.catchyMsg-image .catchyMsg h1{
+  color: #7a1537;
+}
 
 .catchyMsg-image .catchyMsg{
    text-align: center;
@@ -90,7 +97,7 @@ nav a{
 }
 
 .catchyMsg-image .image img{
-  height: 250px;
+  height: 300px;
   width: 900px;
   justify-content: center;
 }
@@ -99,12 +106,14 @@ nav a{
 /* -----------------------------------tools------------------------------------- */
 .tools-achieving-your-goals{
     text-align: center;
-    margin: 2% 0;
+    margin: 100px 0;
+
 }
 
-.tools-achieving-your-goals>h1, .testinomials>h1{
+.tools-achieving-your-goals>h2, .testinomials>h2{
     text-decoration: underline;
     margin-bottom: 7px;
+    color: #7a1537;
 }
 
 .tools-achieving-your-goals>p, .testinomials>p{
@@ -117,11 +126,18 @@ nav a{
     justify-content: center;
     margin-bottom: 4%;
 }
+.tools-achieving-your-goals .tools p{
+  color: #7a1537;
+  text-transform: uppercase;
+}
 
 .tools-achieving-your-goals .tools img{
-    height: 100%;
-    width: 100%;
+    height: 250px;
+    width: 250px;
     margin-bottom: 7px;
+}
+.tools-achieving-your-goals .tools h4{
+  color: #500a35;
 }
 
 .tools-achieving-your-goals .tools div{
@@ -134,6 +150,7 @@ nav a{
     border-radius: 10px;
     font-weight: bold;
     font-size: 1em;
+    margin-bottom: 40px;
 }
 
 .tools-achieving-your-goals button:hover{
