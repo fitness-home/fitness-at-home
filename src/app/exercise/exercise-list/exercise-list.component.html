@@ -24,7 +24,7 @@
       <p>{{exercise?.description}}</p>
       <p>Duration:{{exercise?.duration}}</p>
       <button routerLink="/exercisePlan" class="btn_complete">Add to Plan</button>
-      <button routerLink="/exerciseDiet" class="btn_complete">Edit</button>
+      <button *ngIf="user === 'admin'" (click)="onEditExercise(exercise)" class="btn_complete">Edit</button>
       <i class="fa-solid fa-square-heart"></i>
     </span>
   </div>

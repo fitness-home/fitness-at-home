@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ExerciseService} from "../exercise.service";
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -10,10 +11,12 @@ import {ExerciseService} from "../exercise.service";
 export class ExerciseListComponent implements OnInit {
   searchValue: any;
   exerciseList: any;
-  constructor(public exerciseService: ExerciseService) { }
+  user: any;
+  constructor(public exerciseService: ExerciseService, public router: Router) { }
 
   ngOnInit(): void {
     this.onGetExerciseList();
+    this.user = localStorage.getItem("username");
   }
 
   onGetExerciseList() {
@@ -30,5 +33,9 @@ export class ExerciseListComponent implements OnInit {
     } else {
       this.onGetExerciseList();
     }
+  }
+
+  onEditExercise(exerciseData: any) {
+    this.router.navigateByUrl('/adminExercise', {state: {id: exerciseData._id, name: exerciseData.name, description: exerciseData.description, duration: exerciseData.duration, image: exerciseData.image}} );
   }
 }

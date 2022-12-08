@@ -17,4 +17,8 @@ export class DietService {
   onSearchDiet(searchData: any) : Observable<Object> {
     return this.http.get(`${environment.apiUrl}/diet/search/` + searchData);
   }
+
+  onUpdateDiet(data: any) : Observable<Object> {
+    return this.http.post(`${environment.apiUrl}/diet/update`, data);
+  }
 }

@@ -15,7 +15,8 @@ export class ExercisePlanComponent implements OnInit {
   }
 
   onGetExercisePlan() {
-    this.exerciseService.getExercisePlan().subscribe((res) =>  {
+    let user = { user: localStorage.getItem("user")};
+    this.exerciseService.getExercisePlan(user).subscribe((res) =>  {
       this.exercisePlan = res;
     })
   }

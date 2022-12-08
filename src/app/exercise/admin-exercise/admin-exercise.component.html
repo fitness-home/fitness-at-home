@@ -1,5 +1,5 @@
 
-  
+
   <div class="update-exercise">
       <div>
       <h2>UPDATE EXERCISE LIST</h2>
@@ -7,21 +7,21 @@
       <div class="update">
       <div>
           <span class="mg">
-              <img [src]="" id="img1" />
+              <img [src]="exerciseData.image" id="img1" />
             </span>
 
         </div>
-        <div>
-            <label for="name">Exercise Name:</label>
-            <input type="text" placeholder=" Add Name" /><br/>
-            <label for="name">Description :</label>
-            <input type="text" placeholder=" Description " /><br/>
-            <label for="name">Calories :</label>
-            <input type="text" placeholder=" Add calories " /><br/>
-    </div>
+        <form #updateExercise="ngForm" (ngSubmit)="onUpdateExercise(updateExercise)">
+          <label for="name">Exercise Name:</label>
+          <input type="text" id="name" name="name" [(ngModel)] = "exerciseData.name"  placeholder=" Add Diet Name" /><br/>
+          <label for="description">Description:</label>
+          <input type="text" id="description" name="description" [(ngModel)] ="exerciseData.description" placeholder=" Description " /><br/>
+          <label for="duration">Duration:</label>
+          <input type="text" id="duration" name="duration" [(ngModel)] ="exerciseData.duration" placeholder=" Add Duration " /><br/>
+          <button type="submit">Update</button>
+        </form>
     </div>
 
-      
+
   </div>
-  
-  
+

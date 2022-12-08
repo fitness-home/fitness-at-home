@@ -7,18 +7,19 @@
    <div class="update">
     <div >
         <span class="mg">
-            <img [src]="" id="img1" />
+            <img [src]="dietData.image" id="img1" />
           </span>
-   
+
     </div>
-    <div>
-    <label for="name">Diet Name:</label>   
-    <input type="text" placeholder=" Add Diet Name" /><br/>
-    <label for="name">Description:</label>
-    <input type="text" placeholder=" Description " /><br/>
-    <label for="name">calories:</label>
-    <input type="text" placeholder=" Add calories " /><br/>
-    </div>
+     <form #updateDiet="ngForm" (ngSubmit)="onUpdateDiet(updateDiet)">
+    <label for="name">Diet Name:</label>
+    <input type="text" id="name" name="name" [(ngModel)] = "dietData.name"  placeholder=" Add Diet Name" /><br/>
+    <label for="description">Description:</label>
+    <input type="text" id="description" name="description" [(ngModel)] ="dietData.description" placeholder=" Description " /><br/>
+    <label for="calories">calories:</label>
+    <input type="text" id="calories" name="calories" [(ngModel)] ="dietData.calories" placeholder=" Add calories " /><br/>
+      <button type="submit">Update</button>
+    </form>
 </div>
 </div>
 

@@ -14,11 +14,15 @@ export class ExerciseService {
     return this.http.get(`${environment.apiUrl}/exercise`);
   }
 
-  getExercisePlan(): Observable<Object> {
-    return this.http.get(`${environment.apiUrl}/plan/all`);
+  getExercisePlan(user: any): Observable<Object> {
+    return this.http.post(`${environment.apiUrl}/plan/user`, user);
   }
 
   onSearchExercise(searchData: any) : Observable<Object> {
     return this.http.get(`${environment.apiUrl}/exercise/search/` + searchData);
+  }
+
+  onUpdateExercise(data: any) : Observable<Object> {
+    return this.http.post(`${environment.apiUrl}/exercise/update`, data);
   }
 }

@@ -43,7 +43,6 @@ const routes: Routes = [
   {path: "consent", component: ConsentFormComponent},
   {path: "adminDiet", component: AdminDietComponent},
   {path: "adminExercise", component:AdminExerciseComponent},
-
 ];
 
 @NgModule({
