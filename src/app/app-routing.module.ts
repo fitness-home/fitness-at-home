@@ -22,6 +22,7 @@ import {Survey4Component} from "./survey/survey4/survey4.component";
 import {Survey5Component} from "./survey/survey5/survey5.component";
 import {Survey6Component} from "./survey/survey6/survey6.component";
 import {ReportComponent} from "./progress/report/report.component";
+import {AppointmentComponent} from "./appointment/appointment.component";
 
 const routes: Routes = [
   {path: "", component: LandingComponent},
@@ -33,6 +34,7 @@ const routes: Routes = [
   {path: "exercisePlan", component: ExercisePlanComponent},
   {path: "expert", component: ExpertListComponent},
   {path: "expertDetail", component: ExpertDetailComponent},
+  {path: "appointment", component: AppointmentComponent},
   {path: "about", component: AboutComponent},
   {path: "survey", component: Survey1Component},
   {path: "survey2", component: Survey2Component},
