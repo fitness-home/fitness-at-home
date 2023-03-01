@@ -18,4 +18,8 @@ export class AuthService {
     let userData = {"user": user};
     return this.http.post(`${environment.apiUrl}/plan/generate`, userData);
   }
+
+  login(user: any): Observable<Object> {
+    return this.http.post(`${environment.apiUrl}/user/login`, user);
+  }
 }

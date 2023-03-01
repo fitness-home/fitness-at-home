@@ -36,6 +36,7 @@ export class RegistrationComponent implements OnInit {
         let user = {} as any;
         user = response;
         localStorage.setItem("user", user?._id);
+        localStorage.setItem("username", user?.username);
         this.authService.getPlan(user?._id).subscribe((res: any) =>  {
          console.log("plan Generated");
         })

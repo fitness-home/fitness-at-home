@@ -2,10 +2,12 @@
 
     <div class="member-login">
         <div>
+          <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
         <h2>MEMBER LOGIN</h2>
-        <input type="text" placeholder="Enter Your Username" /><br/>
-        <input type="text" placeholder="Enter Your Password" /><br/>
+        <input type="text" id="username" name="username" placeholder="Enter Your Username" ngModel /><br/>
+        <input type="password" id="password" name="password" placeholder="Enter Your Password" ngModel/><br/>
         <button class="login-btn">LOGIN</button><br/>
+          </form>
         </div>
         <a href="#">FORGOT PASSWORD?</a>
     </div>
