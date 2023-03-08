@@ -2,7 +2,7 @@
 <div class="block1">
   <form #survey5="ngForm" (ngSubmit)="addQuestion(survey5)">
     <h2> How many lbs do you want to lose? </h2>
-    <input type="text" name="targetWeightGoal" placeholder="Enter Weight You Want to Lose (lbs)" style="width: 300px; height: 30px;" ngModel>
+    <input type="number" name="targetWeightGoal" placeholder="Enter Weight You Want to Lose (lbs)" style="width: 300px; height: 30px;" ngModel>
     <div style="display: flex; align-items: flex-end">
       <button class="button" routerLink="/survey4">Back</button>
       <input class="button" type="submit" value="Next"/>

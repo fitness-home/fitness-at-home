@@ -21,6 +21,9 @@ import {Survey5Component} from "./survey/survey5/survey5.component";
 import {Survey6Component} from "./survey/survey6/survey6.component";
 import { ReportComponent } from './progress/report/report.component';
 import { AppointmentComponent } from './appointment/appointment.component';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSelectModule} from "@angular/material/select";
 
 @NgModule({
   declarations: [
@@ -34,8 +37,7 @@ import { AppointmentComponent } from './appointment/appointment.component';
     Survey6Component,
     ProgressComponent,
     ReportComponent,
-    AppointmentComponent
-  ],
+    AppointmentComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -48,6 +50,9 @@ import { AppointmentComponent } from './appointment/appointment.component';
     ExpertModule,
     SharedModule,
     LandingModule,
+    PdfViewerModule,
+    BrowserAnimationsModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
