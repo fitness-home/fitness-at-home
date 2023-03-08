@@ -8,14 +8,14 @@ import {Router} from "@angular/router";
   styleUrls: ['./progress.component.scss']
 })
 export class ProgressComponent implements OnInit {
-
+  isPdf: boolean = true;
+  pdfSrc: any;
   constructor(public progressService: ProgressService, public router: Router) { }
 
   ngOnInit(): void {
   }
 
   onAddProgress(data:any) {
-    debugger
     let userId = localStorage.getItem("user");
     let userData = {
       weight : data.value.weight,
@@ -26,7 +26,19 @@ export class ProgressComponent implements OnInit {
     }
     console.log(userData);
     this.progressService.addProgress(userData).subscribe((res) =>  {
-      this.router.navigate(['']);
+      this.onGenerateReport();
+    })
+  }
+
+  onGenerateReport() {
+    let userId = localStorage.getItem("user");
+    let userData = {
+      user: userId
+    }
+   this.pdfSrc = this.progressService.getProgressReport(userData).subscribe((res) =>  {
+      if(res) {
+        this.isPdf = true;
+      }
     })
   }
 
