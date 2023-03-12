@@ -2,7 +2,7 @@
 <div class="block1">
   <form #survey4="ngForm" (ngSubmit)="addQuestion(survey4)">&nbsp;
     <h2> How many time workout in a week? </h2>
-    <input type="text" name="baselineActivityLevel" placeholder="Enter the Number of Exercises" style="width: 300px; height: 30px;" ngModel>
+    <input type="number" name="baselineActivityLevel" placeholder="Enter the Number of Exercises" style="width: 300px; height: 30px;" ngModel>
     <div style="display: flex; align-items: flex-end">
       <button class="button" routerLink="/survey3">Back</button>
       <input class="button" type="submit" value="Next"/>

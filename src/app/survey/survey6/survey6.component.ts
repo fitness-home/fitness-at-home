@@ -11,6 +11,12 @@ import {Router} from "@angular/router";
 export class Survey6Component implements OnInit {
   question: Question = {} as any;
   questionData: any;
+  Gender: any = [
+    {value: 'male', viewValue: "Male"},
+    {value: 'female', viewValue: "Female"},
+    {value: 'other', viewValue: "Other"},
+  ]
+  selectedGender: any = 'male';
   constructor(public router: Router, public surveyService: SurveyService) { }
 
   ngOnInit(): void {
@@ -36,7 +42,7 @@ export class Survey6Component implements OnInit {
     }
     this.surveyService.addSurvey(this.question).subscribe((res) =>  {
       if(res)
-      this.router.navigate(["diet"]);
+      this.router.navigate(["dietPlan"]);
     })
   }
 
