@@ -1,0 +1,24 @@
+.schedule{
+    background-color: gainsboro;
+    width: 35%;
+    height: 55vh;
+    margin: auto;
+    margin-top: 4%;
+    text-align: center;
+    padding: 2% 0 0 0;
+}
+.update{
+    display: flex;
+}
+.schedule >div h2{
+    margin-bottom: 30px;
+}
+.schedule >div input{
+  margin: 20px 10px;
+   width: 50%;
+   height: 35px;
+   background-color: rgb(247, 241, 241);
+   border: none;
+   padding: 0 5px;
+   
+}
