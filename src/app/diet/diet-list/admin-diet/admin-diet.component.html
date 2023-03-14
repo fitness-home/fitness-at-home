@@ -1,0 +1,25 @@
+
+
+<div class="update-diet">
+    <div>
+    <h2>UPDATE DIET LIST</h2>
+    </div>
+   <div class="update">
+    <div >
+        <span class="mg">
+            <img [src]="dietData.image" id="img1" />
+          </span>
+
+    </div>
+     <form #updateDiet="ngForm" (ngSubmit)="onUpdateDiet(updateDiet)">
+    <label for="name">Diet Name:</label>
+    <input type="text" id="name" name="name" [(ngModel)] = "dietData.name"  placeholder=" Add Diet Name" /><br/>
+    <label for="description">Description:</label>
+    <input type="text" id="description" name="description" [(ngModel)] ="dietData.description" placeholder=" Description " /><br/>
+    <label for="calories">calories:</label>
+    <input type="text" id="calories" name="calories" [(ngModel)] ="dietData.calories" placeholder=" Add calories " /><br/>
+      <button type="submit">Update</button>
+    </form>
+</div>
+</div>
+

@@ -1,0 +1,72 @@
+
+<h3>SIGN UP PAGE</h3>
+
+<div class="register">
+  <form #registerForm="ngForm" (ngSubmit)="addData(registerForm)">
+    <div class="row">
+    <label for="username">User Name:</label>
+    <input type="text"  id="username" name="username" placeholder="Enter user name.." ngModel>
+</div>
+<div class="row">
+    <label for="email">E-mail:</label>
+    <input type="text" id="email" name="email" placeholder="Enter your E-mail adress.." ngModel>
+</div>
+<div class="row">
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" placeholder="Enter password.." ngModel>
+</div>
+<div class="row">
+    <label for="rpwd">Re-enter password:</label>
+    <input type="password" id="rpwd" name="rpwd" placeholder="Re enter your password.." ngModel>
+</div>
+<div class="row">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" placeholder="Enter first name.." ngModel>
+</div>
+<div class="row">
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" placeholder="Enter last name.." ngModel>
+</div>
+    <div class="row">
+      <label for="address">Address:</label>
+      <input type="text" id="address" name="address" placeholder="Enter your address.." ngModel>
+    </div>
+    <div class="city-pincode">
+      <input type="text" id="city" name="city" placeholder="Enter City.." ngModel>
+      <input type="text" id="postalCode" name="postalCode" placeholder="Enter postCode.." ngModel>
+    </div>
+    <div class="security">
+      <h4>Security Questions!</h4>
+
+      <label for="question1">Security Question 1:</label>
+      <select id="question1" name="question1" ngModel>
+        <option value="what is age">What is age</option>
+        <option value="What is weight">What is weight?</option>
+        <option value="favourite food">Favorite food</option>
+      </select>
+      <br>
+      <br>
+      <br>
+      <label for="answer1">Security answer 1:</label>
+      <input type="text" id="answer1" name="answer1" placeholder="Give answer.." ngModel>
+      <br>
+      <br>
+      <br>
+      <label for="question2">Security Question 2:</label>
+      <select id="question2" name="question2" ngModel>
+        <option value="what is age">What is age</option>
+        <option value="What is weight">What is weight?</option>
+        <option value="favourite food">Favorite food</option>
+      </select>
+      <br>
+      <br>
+      <br>
+      <label for="answer2">Security answer 2:</label>
+      <input type="text" id="answer2" name="answer2" placeholder="Give answer.." ngModel>
+    </div>
+
+    <br>
+    <input type="submit" value="Register">
+
+  </form>
+</div>

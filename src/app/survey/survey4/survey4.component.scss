@@ -1,0 +1,26 @@
+* {
+    font-family: "verdana" !important;
+}body {
+   padding: 0;
+   margin: 0 auto;
+ }
+.block1 {
+  text-align: center;
+  line-height: 100px;
+  font-size: x-large;
+  width: 500px;
+  height: 500px;
+  background-color: lightgray;
+  margin: 0 auto;
+}
+.block1 .button {
+  position: relative;
+  padding: 15px 30px;
+  left: 190px;
+  display: block;
+  background-color: #A3C6FB;
+  border: 0;
+  border-radius: 10px;
+  outline: 0;
+  margin: 10px;
+}

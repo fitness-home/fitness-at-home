@@ -1,0 +1,12 @@
+
+<div class="block1" style=" height: auto;"><h2>Question 2</h2></div>
+<div class="block1">
+  <form #survey2="ngForm" (ngSubmit)="addQuestion(survey2)">
+    <h2> What is your height? </h2>
+    <input type="text" name="height" placeholder="Enter Your Height (feet)" style="width: 300px; height: 30px;" ngModel>
+    <div style="display: flex; align-items: flex-end">
+      <button class="button" routerLink="/survey">Back</button>
+      <input class="button" type="submit" value="Next"/>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,48 @@
+import { Component, OnInit } from '@angular/core';
+import {ExerciseService} from "../exercise.service";
+import {Router} from "@angular/router";
+
+
+@Component({
+  selector: 'app-exercise-list',
+  templateUrl: './exercise-list.component.html',
+  styleUrls: ['./exercise-list.component.scss']
+})
+export class ExerciseListComponent implements OnInit {
+  searchValue: any;
+  exerciseList: any;
+  user: any;
+  constructor(public exerciseService: ExerciseService, public router: Router) { }
+
+  ngOnInit(): void {
+    this.onGetExerciseList();
+    this.user = localStorage.getItem("username");
+  }
+
+  onGetExerciseList() {
+    this.exerciseService.getExerciseList().subscribe((res) =>  {
+      this.exerciseList = res;
+    })
+  }
+
+  onSearch(data: any) {
+    if(data) {
+      this.exerciseService.onSearchExercise(data).subscribe((res) =>  {
+        this.exerciseList = res;
+      })
+    } else {
+      this.onGetExerciseList();
+    }
+  }
+
+  onEditExercise(exerciseData: any) {
+    this.router.navigateByUrl('/adminExercise', {state: {id: exerciseData._id, name: exerciseData.name, description: exerciseData.description, duration: exerciseData.duration, image: exerciseData.image}} );
+  }
+
+  onAddToPlan(id: any) {
+    let data= {"exercise": id, "plan": "63914735a516c6532099a174"};
+    this.exerciseService.onUpdatePlan(data).subscribe((res: any) =>  {
+      this.router.navigate(['dietPlan']);
+    })
+  }
+}
