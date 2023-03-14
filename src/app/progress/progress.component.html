@@ -23,14 +23,6 @@
           <input type="text"  id="time" name="ExerciseTime" ngModel placeholder="Fill Time " /><br/>
           <br/>
           <button type="submit">GENERATE</button>
-
-          <pdf-viewer *ngIf="isPdf" [src]="pdfSrc"
-                      [render-text]="true"
-                      [original-size]="false"
-                      style="width: 400px; height: 500px"
-          ></pdf-viewer>
-          <iframe [src]="pdfSrc"  type="application/pdf" ></iframe>
-          <object [data]="pdfSrc" type="application/pdf" width="800" height="400"></object>
         </div>
     </div>
   </form>

@@ -39,7 +39,7 @@ export class DietListComponent implements OnInit {
   }
 
   onAddToPlan(id: any) {
-    let data= {"diet": id, "plan": "63914735a516c6532099a174"};
+    let data= {"diet": id, "user": this.user};
     this.dietService.onUpdatePlan(data).subscribe((res: any) =>  {
       this.router.navigate(['dietPlan']);
     })

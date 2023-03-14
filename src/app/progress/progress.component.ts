@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ProgressService} from "./progress.service";
 import {Router} from "@angular/router";
+import * as FileSaver from "file-saver";
 
 @Component({
   selector: 'app-progress',
@@ -8,7 +9,6 @@ import {Router} from "@angular/router";
   styleUrls: ['./progress.component.scss']
 })
 export class ProgressComponent implements OnInit {
-  isPdf: boolean = true;
   pdfSrc: any;
   constructor(public progressService: ProgressService, public router: Router) { }
 
@@ -35,12 +35,11 @@ export class ProgressComponent implements OnInit {
     let userData = {
       user: userId
     }
-   this.pdfSrc = this.progressService.getProgressReport(userData).subscribe((res) =>  {
-      if(res) {
-        this.isPdf = true;
-      }
-    })
+    this.progressService.getProgressReport(userData).subscribe((resp: any) => {
+      let response = new Blob([resp], {type: 'application/pdf'});
+      FileSaver.saveAs(resp, `filename.pdf`);
+      this.pdfSrc = window.URL.createObjectURL(response);
+      this.router.navigate(['/report'], {queryParams: {pdfSrc: this.pdfSrc}});
+    });
   }
-
-
 }
