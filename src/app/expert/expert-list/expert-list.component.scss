@@ -38,7 +38,25 @@
 .btn_connect{
   background-color: #4CAF50;
 }
+.map{
+  text-align: right;
+  max-width: 100%;
+  height: auto; 
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 10px;
+}
+.left-column {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
+.right-column {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 .view{
   width: 30%;
   align-items: center;

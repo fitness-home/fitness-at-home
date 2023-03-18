@@ -9,17 +9,20 @@
     margin-top: 10px;
     width: 100%;
     padding: 100px 15%;
-    background: dimgray;;
-    color: #efefef;
+    background: rgba(191, 81, 225, 0.578);;
+    font-weight:800;
+    color: #2a124b;
     display: flex;
+    background-image: url('/assets/eat.gif');
 }
 
 .footer div{
     text-align: center;
-
+    font-weight: bolder;
 }
 .col-2{
     flex-grow: 2;
+    font-weight: bolder;
     margin-left:25%;
     margin-right: 25%;
 }
@@ -39,10 +42,18 @@
 .col-1 a{
     display: block;
     text-decoration: none;
-    color:#efefef;
+    font-size: large;
+    text-transform: uppercase;
+   
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:#f4fc16;
     margin-bottom: 10px;
 
 }
+.col-1 a:hover {
+    color: rgb(8, 6, 73);
+    text-decoration: underline;
+  }
 form input{
     width: 400px;
     height:45px;
@@ -73,7 +84,7 @@ form button{
 }
 /* BOTTOM-LINE */
 .bottom-line {
-    background-color: #444554;
+    background-color: #3039e3;
     color: #fff;
     float: bottom;
     align-content: center;

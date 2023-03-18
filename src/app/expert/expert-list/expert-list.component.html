@@ -1,24 +1,32 @@
-<div class="content">
-  <h2>CONNECT TO EXPERT</h2>
-
-  <p>
-    Instruction statement: Send message
-  </p>
-  <h1>EXPERT LIST</h1>
-</div>
-<div  *ngFor="let expert of expertList">
-  <div class="base row algn">
-      <span class="mg">
-        <img [src]="expert?.image" id="img2" />
-      </span>
-    <span class="mg2">
-        <h2>Expert Name:{{expert?.firstname}} {{expert?.lastname}}</h2>
-        <p>Expert Qualification:{{expert?.qualification}}</p>
-        <p>Expert Experience:{{expert?.experience}}</p>
-       <p>Expert Email:{{expert?.email}}</p>
-      <button routerLink="/expertDetail" class="btn_connect">Connect </button>
-      </span>
+<h2 align ="center">CONNECT TO EXPERT</h2>
+  <div class="grid-container">
+    <div class="left-column"> <div class="content">
+      
+    <p>
+      Instruction statement: Send message
+    </p>
+    <h1>EXPERT LIST</h1>
   </div>
-  <br />
-</div>
-
+  <div  *ngFor="let expert of expertList">
+    <div class="base row algn">
+        <span class="mg">
+          <img [src]="expert?.image" id="img2" />
+        </span>
+      <span class="mg2">
+          <h2>Expert Name:{{expert?.firstname}} {{expert?.lastname}}</h2>
+          <p>Expert Qualification:{{expert?.qualification}}</p>
+          <p>Expert Experience:{{expert?.experience}}</p>
+         <p>Expert Email:{{expert?.email}}</p>
+        <button routerLink="/expertDetail" class="btn_connect">Connect </button>
+        </span>
+    </div>
+    <br />
+  </div>
+  
+  </div>
+    <div class="right-column"><div class="map">
+      <a routerLink="/map"><img src="\assets\map2.gif"  alt="nearby map" /></a>
+    </div>
+   </div>
+  </div>
+  
