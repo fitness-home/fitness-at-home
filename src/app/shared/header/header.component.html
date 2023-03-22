@@ -1,21 +1,27 @@
 <div class="" id="beforeNavbar">
   <img src="assets/fitness@home logo.png" alt="LOGO" id="logo" />
-  <div class="" id="signin-sigup">
-    <a routerLink="signin">SIGN IN</a>
-    <span> | </span>
-    <a routerLink="signup">SIGN UP</a>
-  </div>
+  <div  class="" id="signin-sigup">
+    <div *ngIf="!userName">
+      <a routerLink="signin">SIGN IN</a>
+      <span> | </span>
+      <a routerLink="signup">SIGN UP</a>
+    </div>
+    <div *ngIf="userName">
+      <a routerLink="signin">Hello, {{userName}}</a>
+      <span> | </span>
+      <a (click)="onLogOut()">Logout</a>
+    </div>
+    </div>
 </div>
 
 <nav>
   <div class="navbar-links">
-    <a routerLink="about">ABOUT</a>
-    <a routerLink="diet">DIET</a>
-    <a routerLink="exercise">EXERCISE</a>
-    <a routerLink="dietPlan">DIET PLAN</a>
-    <a routerLink="exercisePlan">EXERCISE PLAN</a>
-    <a routerLink="progress">PROGRESS</a>
-    <a routerLink="expert">CONTACT EXPERT</a>
-    <a routerLink="appointment">APPOINTMENT SCHEDULING</a>
+    <a [routerLinkActive]="'active'" routerLink="about">ABOUT</a>
+    <a [routerLinkActive]="'active'" routerLink="diet">DIET</a>
+    <a [routerLinkActive]="'active'" routerLink="exercise">EXERCISE</a>
+    <a [routerLinkActive]="'active'" routerLink="plan">CUSTOMIZED PLAN</a>
+    <a [routerLinkActive]="'active'"  routerLink="progress">PROGRESS</a>
+    <a [routerLinkActive]="'active'" routerLink="expert">CONTACT EXPERT</a>
+    <a [routerLinkActive]="'active'" routerLink="appointment">APPOINTMENT SCHEDULING</a>
   </div>
 </nav>

@@ -24,6 +24,7 @@ import { AppointmentComponent } from './appointment/appointment.component';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSelectModule} from "@angular/material/select";
+import { PlanComponent } from './plan/plan.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import {MatSelectModule} from "@angular/material/select";
     Survey6Component,
     ProgressComponent,
     ReportComponent,
-    AppointmentComponent],
+    AppointmentComponent,
+    PlanComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

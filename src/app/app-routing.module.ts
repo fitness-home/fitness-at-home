@@ -23,17 +23,21 @@ import {Survey5Component} from "./survey/survey5/survey5.component";
 import {Survey6Component} from "./survey/survey6/survey6.component";
 import {ReportComponent} from "./progress/report/report.component";
 import {AppointmentComponent} from "./appointment/appointment.component";
+import {PlanComponent} from "./plan/plan.component";
+import {ExpertLocationComponent} from "./expert/expert-location/expert-location.component";
 
 const routes: Routes = [
   {path: "", component: LandingComponent},
   {path: "signup", component: RegistrationComponent},
   {path: "signin", component: SigninComponent},
   {path: "diet", component: DietListComponent},
+  {path: "plan", component: PlanComponent},
   {path: "dietPlan", component: DietPlanComponent},
   {path: "exercise", component: ExerciseListComponent},
   {path: "exercisePlan", component: ExercisePlanComponent},
   {path: "expert", component: ExpertListComponent},
   {path: "expertDetail", component: ExpertDetailComponent},
+  {path: "expertLocation", component: ExpertLocationComponent},
   {path: "appointment", component: AppointmentComponent},
   {path: "about", component: AboutComponent},
   {path: "survey", component: Survey1Component},

@@ -3,7 +3,7 @@
   <h2>DIET LIST</h2>
 
   <div class="search">
-    <input type="text"  [(ngModel)]="searchValue" class="inpSearch" placeholder="Search..">
+    <input type="text"  [(ngModel)]="searchValue" class="inpSearch" placeholder="Search like: Banana">
     <button type="submit" (click)="onSearch(searchValue)">Search</button>
   </div>
    <!--Fitnessapp is a unique fitness concept that was created to help you get the
@@ -35,4 +35,4 @@
 
   </div>
 
-<input class="view" type="submit" value="View diet plans" />
+<input routerLink="/dietPlan" class="view" type="submit" value="View diet plans" />
