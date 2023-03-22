@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {ProgressService} from "../progress.service";
+import {ActivatedRoute, Route} from "@angular/router";
 
 @Component({
   selector: 'app-report',
@@ -7,18 +8,17 @@ import {ProgressService} from "../progress.service";
   styleUrls: ['./report.component.scss']
 })
 export class ReportComponent implements OnInit {
-
-  constructor(public progressService: ProgressService) { }
+  pdfSrc: any;
+  src: any;
+  constructor(public aRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.onGenerateReport();
-  }
+    this.aRoute
+      .queryParams.forEach(value => {
+       this.src = value;
+       this.pdfSrc = this.src?.pdfSrc;
+      })
 
-  onGenerateReport() {
-    let userData = {"user": localStorage.getItem("user")};
-    this.progressService.getProgressReport(userData).subscribe((res) =>  {
-      console.log(res);
-    })
   }
 
 }

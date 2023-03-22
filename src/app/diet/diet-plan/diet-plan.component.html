@@ -1,15 +1,12 @@
 <body>
 <div class="container-intro">
-    <h1>Hi {{userName}}!!</h1>
-    <p>Welcome to Fitness@Home App. Here is your personalised plan</p>
-    <p><span>Instruction: </span>Below is a list of customised exercise plan.
-         Click "Completed when you complete the exercise for the day.</p>
+    <p><strong><span>Instruction: </span></strong>Below is a list of customised Diet plan.
+         Click "Completed" when you complete the Diet for the day.</p>
     <br><br>
     <h2>CUSTOMISED DIET PLAN</h2>
 
 </div>
-<div class="container">
-
+<div class="container cont-area">
     <div class="row">
         <tr *ngFor="let plan of dietPlan">
         <div class="card">
@@ -18,6 +15,7 @@
                 <div class="card-block">
                     <h4 class="card-title">{{plan?.name}}</h4>
                     <p class="card-text">{{plan?.description}}</p>
+                    <p class="card-text">Meal Type: {{plan?.mealType | titlecase}}</p>
                     <small class="text-muted">{{plan.calories}}</small>
                     <br><br>
                     <a href="#" class="button">COMPLETED</a>

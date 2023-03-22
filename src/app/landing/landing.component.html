@@ -3,35 +3,35 @@
     <div class="catchyMsg">
         <h1></h1>
         <h1>Here is the fitness plan which can be perform at home and that makes you healthy!!</h1><br>
-        <div class="image"> <img src="\assets\fitnesss1.gif"></div>
+        <div class="image"> <img src="\assets\fitness1.gif"></div>
     </div>
   </div><br>
 <br>
 
 <div class="tools-achieving-your-goals">
-  <h2>Tools Achieving Your Goals</h2><br>
+  <h2><br><br><br>TOOLS FOR ACHIEVING YOUR GOALS</h2><br><br>
   <h3> ONE STEP CLOSER </h3><br>
 
   <div class="tools">
     <div>
-      <img src="\assets\track.jpeg" alt="L-T-I" />
-      <p>Learn-Track-Improve</p><br>
+      <a [routerLink]="['/progress']"><img src="\assets\track.gif" alt="L-T-I" />
+      <p>Learn-Track-Improve</p><br></a>
       <h4>Keep track your diet and exercise and learn new things</h4>
     </div>
     <div>
-      <img src="\assets\motivation (2).jpeg" alt="SM" />
-      <p>Stay Motivated</p><br>
+      <a [routerLink]="['/plan']"><img src="\assets\motivation.gif" alt="SM" />
+        <p>Stay Motivated</p><br></a>
       <h4> Always follow plan which keeps you motivated</h4>
     </div>
     <div>
-      <img src="\assets\connected.jpeg" alt="CTE" />
-      <p>Connected to Expert</p><br>
+      <a [routerLink]="['/expert']"> <img src="\assets\connect.gif" alt="CTE" />
+      <p> Connect to Expert</p><br></a>
       <h4>Take help from listed experts who keeps you updated</h4>
     </div>
 
   </div><br>
 
-  <button>JOIN US</button>
+  <button [routerLink]="['/about']">ABOUT US</button>
 </div>
 </div>
 

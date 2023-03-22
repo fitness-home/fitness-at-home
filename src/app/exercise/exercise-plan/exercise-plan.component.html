@@ -1,32 +1,27 @@
 <body>
 <div class="container-intro">
-  <!-- when buiding frontend, please replace user with with apppropriate logged in user's name -->
-  <!-- <h1>Hi <%= user %>!!</h1> -->
-  <h1>Hi {{userName}}!!</h1>
-  <p>Welcome to Fitness@Home App. Here is your personalised plan</p>
-  <p><span>Instruction: </span>Below is a list of customised exercise plan.
-    Click "Completed when you complete the exercise for the day.</p>
+  <p><strong><span>Instruction: </span></strong>Below is a list of customised exercise plan.
+    Click "Completed" when you complete the exercise for the day.</p>
   <br><br>
-  <h2>CUSTOMISED DIET PLAN</h2>
+  <h2>CUSTOMISED EXERCISE PLAN</h2>
 
 </div>
 <div class="container">
-
-
-  <!-- when buiding frontend, please change dietList to plan-dietList. As of now the plan list is not created -->
-  <!-- <tr *ngFor="let list of dietList"> -->
-
   <div class="row">
-    <tr *ngFor="let plan of exercisePlan">
+    <tr *ngFor="let plan of exercisePlan; let i = index">
       <div class="card">
         <div class="card-horizontal">
-          <img class="card-img-top" [src]="plan?.image" alt="Card image cap">
+          <img class="card-img-top" [src]="isStart[i]?'assets/'+plan?.name+'.gif':plan?.image" alt="Card image cap">
           <div class="card-block">
             <h4 class="card-title">{{plan?.name}}</h4>
             <p class="card-text">{{plan?.description}}</p>
             <small class="text-muted">{{plan?.duration}}</small>
             <br><br>
-            <a class="button">COMPLETED</a>
+            <div class="align">
+              <a class="button">COMPLETED</a>
+              <a class="button" *ngIf="!isStart[i]"  (click)="isStart[i] = !isStart[i]">Start</a>
+              <a class="button" *ngIf="isStart[i]"  (click)="isStart[i] = !isStart[i]">Stop</a>
+            </div>
           </div>
 
         </div>
