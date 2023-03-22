@@ -9,6 +9,7 @@ import {ExerciseService} from "../exercise.service";
 export class ExercisePlanComponent implements OnInit {
   exercisePlan: any;
   userName: any;
+  isStart: any = [];
   constructor(public exerciseService: ExerciseService) { }
 
   ngOnInit(): void {
@@ -21,5 +22,13 @@ export class ExercisePlanComponent implements OnInit {
     this.exerciseService.getExercisePlan(user).subscribe((res: any) =>  {
       this.exercisePlan = res[0]?.exercise;
     })
+  }
+
+  onTap(event: any) {
+      console.log("on Tap"+ event)
+  }
+
+  onPinch(event: any) {
+    console.log(event);
   }
 }

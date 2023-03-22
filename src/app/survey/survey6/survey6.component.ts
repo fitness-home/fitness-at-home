@@ -42,7 +42,7 @@ export class Survey6Component implements OnInit {
     }
     this.surveyService.addSurvey(this.question).subscribe((res) =>  {
       if(res)
-      this.router.navigate(["dietPlan"]);
+      this.router.navigate(["plan"]);
     })
   }
 

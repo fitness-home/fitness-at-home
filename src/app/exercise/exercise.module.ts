@@ -16,7 +16,7 @@ import { AdminExerciseComponent } from './admin-exercise/admin-exercise.componen
     ExerciseRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule,
+    HttpClientModule
   ]
 })
 export class ExerciseModule { }
