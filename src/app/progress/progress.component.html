@@ -7,20 +7,20 @@
     <form #progress="ngForm" (ngSubmit)="onAddProgress(progress)">
       <div class="update">
         <div class="update">
-          <label for="weight">Weight:</label><br>
+          <label for="weight">Add current Weight?</label><br>
           <input type="text" name="weight" ngModel id="weight" placeholder="add weight" />
         </div>
         <div>
-          <label for="exercise">Follow exercise :</label><br>
-          <input type="text" name="FollowExercise" ngModel id="exercise" placeholder=" Fill information " /><br/>
+          <label for="exercise">Did you follow exercise?</label><br>
+          <input type="text" name="FollowExercise" ngModel id="exercise" placeholder=" Answer in Yes or No " /><br/>
         </div>
         <div>
-          <label for="diet">Follow diet :</label><br>
-          <input type="text" id="diet" name="FollowDiet" ngModel placeholder="fill information " /><br/>
+          <label for="diet">Did you follow diet?</label><br>
+          <input type="text" id="diet" name="FollowDiet" ngModel placeholder="Answer in Yes or No" /><br/>
         </div>
         <div>
-          <label for="time">Exercise Time :</label><br>
-          <input type="text"  id="time" name="ExerciseTime" ngModel placeholder="Fill Time " /><br/>
+          <label for="time"> How many time you did Exercise in week?</label><br>
+          <input type="text"  id="time" name="ExerciseTime" ngModel placeholder="How many times you followed " /><br/>
           <br/>
           <button type="submit">GENERATE</button>
         </div>
