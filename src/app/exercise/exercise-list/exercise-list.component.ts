@@ -11,12 +11,14 @@ import {Router} from "@angular/router";
 export class ExerciseListComponent implements OnInit {
   searchValue: any;
   exerciseList: any;
-  user: any;
+  userType: any;
+  user:any;
   constructor(public exerciseService: ExerciseService, public router: Router) { }
 
   ngOnInit(): void {
     this.onGetExerciseList();
-    this.user = localStorage.getItem("username");
+    this.userType =localStorage.getItem("username");
+    this.user = localStorage.getItem("user");
   }
 
   onGetExerciseList() {
@@ -40,9 +42,13 @@ export class ExerciseListComponent implements OnInit {
   }
 
   onAddToPlan(id: any) {
-    let data= {"exercise": id, "plan": "63914735a516c6532099a174"};
+    let data= {"exercise": id, "user": this.user};
     this.exerciseService.onUpdatePlan(data).subscribe((res: any) =>  {
-      this.router.navigate(['dietPlan']);
+      debugger
+      console.log(res);
+      if(res) {
+        this.router.navigate(['exercisePlan']);
+      }
     })
   }
 }

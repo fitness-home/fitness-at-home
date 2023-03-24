@@ -27,7 +27,7 @@
       <p>Meal Type: {{diet?.mealType}}</p>
       <p>Calories: {{diet.calories}}</p>
       <button (click)="onAddToPlan(diet._id)" routerLink="/dietPlan" class="btn_complete">Add to Plan</button>
-       <button *ngIf="user === 'admin'" (click)="onEditDiet(diet)" class="btn_complete">Edit</button>
+       <button *ngIf="userType === 'admin'" (click)="onEditDiet(diet)" class="btn_complete">Edit</button>
       <i class="fa-solid fa-square-heart"></i>
     </span>
   </div>
