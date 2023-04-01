@@ -43,8 +43,8 @@ export class DietListComponent implements OnInit {
   onAddToPlan(id: any) {
     let data= {"diet": id, "user": this.user};
     this.dietService.onUpdatePlan(data).subscribe((res: any) =>  {
-      if(res.errors) {
-        this.router.navigate(['dietPlan']);
+      if(res) {
+        this.router.navigate(['plan']);
       }
     })
   }

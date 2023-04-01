@@ -9,15 +9,29 @@
           </span>
 
     </div>
-     <form #updateDiet="ngForm" >
-    <label for="name">Select Date:</label>
-
-    
-    <input type="text" id="name" name="date"  type="date" placeholder=" Select" /><br/>
-    <label for="description">Select Time:</label>
-    <input type="text" id="description" name="time" type="time" placeholder=" select " /><br/>
-    
+     <form #appointmentForm="ngForm" (ngSubmit)="addAppointment(appointmentForm)" >
+       <div class="d-flex">
+         <label class="w-70" for="expert">Select Expert:</label>
+         <mat-select id="expert" name="expert" [(ngModel)]="selectedExpert._id" >
+           <mat-option *ngFor="let expert of expertList" [value]="expert._id">
+             {{ expert.firstname }}  {{expert.lastname}}
+           </mat-option>
+         </mat-select>
+       </div>
+       <br/>
+       <label for="name">Select Date:</label>
+       <input type="text" id="name" name="date"  ngModel type="date" placeholder=" Select" /><br/>
+       <div class="d-flex">
+         <label class="w-70" for="description">Select Time:</label>
+       <mat-select id="description" name="time" [(ngModel)]="selectedTime" >
+         <mat-option *ngFor="let timeSlot of timeSlots" [value]="timeSlot.value">
+           {{ timeSlot.viewValue }}
+         </mat-option>
+       </mat-select>
+       </div>
+       <br/>
       <button type="submit">Schedule Appoinment</button>
     </form>
 </div>
+  <div *ngIf="displayMessage">{{displayMessage}}</div>
 </div>
