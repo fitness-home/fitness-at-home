@@ -10,12 +10,14 @@ import {Router} from "@angular/router";
 export class DietListComponent implements OnInit {
   searchValue: any;
   dietList: any;
-  user: any;
+  userType: any;
+  user:any;
   constructor(public dietService: DietService, public router: Router) { }
 
   ngOnInit(): void {
     this.onGetDietList();
-    this.user = localStorage.getItem("username");
+    this.userType =localStorage.getItem("username");
+    this.user = localStorage.getItem("user");
   }
 
   onGetDietList() {
@@ -41,7 +43,9 @@ export class DietListComponent implements OnInit {
   onAddToPlan(id: any) {
     let data= {"diet": id, "user": this.user};
     this.dietService.onUpdatePlan(data).subscribe((res: any) =>  {
-      this.router.navigate(['dietPlan']);
+      if(res.errors) {
+        this.router.navigate(['dietPlan']);
+      }
     })
   }
 

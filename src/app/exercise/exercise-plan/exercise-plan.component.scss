@@ -2,12 +2,13 @@ body{
   margin: auto;
   padding: 50px;
   font-family: 'Lexend Deca', sans-serif;
+  height: max-content;
   color: #2E475D;
   text-align: center;
 
 }
 .container{
-  max-width: 500px;
+  max-width: 600px;
   margin: auto;
   align-items: center;
 }
@@ -15,12 +16,11 @@ body{
   display: flex;
   flex: 1 1 auto;
   align-items: center;
-  margin-bottom: 4rem;
   padding: 0%;
 }
 .card{
   margin-bottom:4rem;
-  background-color:dimgray;
+  background-color:#d0cece;;
   padding:2rem;
   height:auto;
   width:100%;
@@ -79,4 +79,7 @@ body{
 }
 .card-block{
   text-align: center;
+}
+.align {
+  display: flex;
 }

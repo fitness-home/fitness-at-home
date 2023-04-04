@@ -1,11 +1,27 @@
+
 <h2 align ="center">CONNECT TO EXPERT</h2>
   <div class="grid-container">
-    <div class="left-column"> <div class="content">
-      
-    <p>
-      Instruction statement: Send message
-    </p>
-    <h1>EXPERT LIST</h1>
+    <div class="left-column">
+    <div class="content">
+  <p>
+    Instruction statement: Send message
+  </p>
+  <h1>EXPERT LIST</h1>
+</div>
+<div  *ngFor="let expert of expertList">
+  <div class="base row algn">
+      <span class="mg">
+        <img [src]="expert?.image" id="img2" />
+      </span>
+    <span class="mg2">
+        <h2>Expert Name:{{expert?.firstname}} {{expert?.lastname}}</h2>
+        <p>Expert Qualification:{{expert?.qualification}}</p>
+        <p>Expert Experience:{{expert?.experience}}</p>
+       <p>Expert Email:{{expert?.email}}</p>
+      <p>Expert Address: {{expert?.address}}</p>
+      <button routerLink="/expertDetail" class="btn_connect">Connect</button>
+      <button routerLink="/expertLocation" class="btn_connect mg2">View Location</button>
+      </span>
   </div>
   <div  *ngFor="let expert of expertList">
     <div class="base row algn">

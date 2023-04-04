@@ -24,7 +24,7 @@
 #signin-sigup a{
     text-decoration: none;
     color: black;
-    
+
 }
 
 /* -----------------------------------navbar------------------------------------- */
@@ -43,7 +43,10 @@ nav{
 nav a{
     text-decoration: none;
     color: black;
-    margin: 0 30px;
+    padding: 0 30px;
+}
+nav .active {
+  background-color: white;
 }
 /* -----------------------------------navbar-end------------------------------------- */
 /* -----------------------------------catchymsg-image------------------------------------- */
@@ -52,7 +55,7 @@ nav a{
     display: flex;
     padding: 2% 5%;
     height: 35vh;
-    
+
 }
 
 .catchyMsg-image .catchyMsg{
@@ -83,11 +86,11 @@ nav a{
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center center;
-    
+
 }
 
-/* -----------------------------------catchymsg-image-end------------------------------------- */ 
-/* -----------------------------------tools------------------------------------- */ 
+/* -----------------------------------catchymsg-image-end------------------------------------- */
+/* -----------------------------------tools------------------------------------- */
 .tools-achieving-your-goals{
     text-align: center;
     margin: 2% 0;
@@ -133,11 +136,11 @@ nav a{
     color: white;
 }
 
-@media screen and (min-width: 960px) 
-{ 
-  .footer, .topnav { 
-    height: 45vh; 
-  } 
+@media screen and (min-width: 960px)
+{
+  .footer, .topnav {
+    height: 45vh;
+  }
 }
 html, body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -146,12 +149,12 @@ html, body {
   padding: 0;
 }
 /* footer-container is a nested grid within the footer, with 7 columns */
-.topnav-container { 
+.topnav-container {
     grid-column: 2 / 3;
-    display: grid; 
-    
-    /* ACTING AS A GRID CONTAINER */ 
-    grid-template-columns: 15% 45% 10% 10% 10% 10%; 
+    display: grid;
+
+    /* ACTING AS A GRID CONTAINER */
+    grid-template-columns: 15% 45% 10% 10% 10% 10%;
     grid-template-areas: "logo search . profile register signIn postAd";
   }
 .footer {
@@ -159,29 +162,29 @@ html, body {
     bottom: 0;
     width: 100%;
     /* Set the fixed height of the footer here */
-    padding: 4em 0; 
-    display: grid; 
+    padding: 4em 0;
+    display: grid;
   /*grid-template-columns: 7vw 1fr 7vw; */
-  grid-template-rows: auto auto; 
-  background: #000; 
+  grid-template-rows: auto auto;
+  background: #000;
   }
-  .footer-container { 
-    grid-template-columns: 1fr; 
-    grid-template-areas: "logo" "newsletter" "social" "navigation"; 
-  } 
-  
-  .footer-logo, .social { 
-    justify-self: center; 
-    align-self: center; 
-  } 
+  .footer-container {
+    grid-template-columns: 1fr;
+    grid-template-areas: "logo" "newsletter" "social" "navigation";
+  }
+
+  .footer-logo, .social {
+    justify-self: center;
+    align-self: center;
+  }
   /* footer-container is a nested grid within the footer, with 3 columns and 2 rows */
-  .footer-container { 
+  .footer-container {
     grid-column: 2 / 3;
-    display: grid; 
-    
-    /* ACTING AS A GRID CONTAINER */ 
-    grid-template-columns: 1fr 1fr 2fr; 
-    grid-template-rows: auto auto; 
+    display: grid;
+
+    /* ACTING AS A GRID CONTAINER */
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows: auto auto;
     grid-template-areas: "logo . navigation" "social . newsletter";
   }
 
@@ -191,20 +194,20 @@ html, body {
     width: 70px;
     float:left;
   }
-  .footer-logo { 
+  .footer-logo {
     grid-area: logo;
-    align-self: start; 
-  } 
+    align-self: start;
+  }
 
   /* NAVLINKS */
-.navlinks { 
-    grid-area: navigation; 
+.navlinks {
+    grid-area: navigation;
     align-self: center;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 10px;
     /* grid-auto-rows: minmax(100px, auto);  */
-  } 
+  }
   .navlinks-heading{
     grid-column: 1 / 5;
     grid-row: 1;
@@ -225,51 +228,51 @@ html, body {
     grid-column: 4 / 5;
     grid-row: 2;
   }
-  
+
   /* SOCIAL */
-.social 
-{ 
+.social
+{
   grid-area: social;
   align-self: end;
-  display: grid; 
-  grid-template-columns: repeat(4, 1fr); 
-  grid-template-rows: repeat(2, 1fr); 
-  justify-items: center; 
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-items: center;
   width: 100%;
 
-  border-bottom: 2px solid gray; 
+  border-bottom: 2px solid gray;
 }
-.social h3 { 
-  grid-column: 1 / 5; 
+.social h3 {
+  grid-column: 1 / 5;
   grid-row: 2;
-} 
+}
 .social > div{
   padding: 5px;
   grid-row: 1;
 }
-.facebook { 
+.facebook {
   justify-self: right;
-  grid-row: 1; 
-} 
-.instagram { 
+  grid-row: 1;
+}
+.instagram {
   justify-self: left;
-  grid-row: 1; 
+  grid-row: 1;
 }
 
 /* NEWSLETTER */
-.newsletter { 
-    grid-area: newsletter; 
-    align-self: end; 
+.newsletter {
+    grid-area: newsletter;
+    align-self: end;
   }
-  .newsletter-text{ 
-    margin: 0 0 1.1rem; 
-    line-height: 2rem; 
+  .newsletter-text{
+    margin: 0 0 1.1rem;
+    line-height: 2rem;
     text-align: center;
   }
-  .text-input { 
+  .text-input {
     text-align: center;
-    float: bottom; 
-  } 
+    float: bottom;
+  }
   .newsletter input[type=text]{
     padding: 6px;
     margin-top: 8px;
@@ -280,19 +283,19 @@ html, body {
   .newsletter .text-input button:hover {
     background: #ccc;
   }
-  
-  .footer a { 
-    color: white; 
-  } 
+
+  .footer a {
+    color: white;
+  }
 
   /* BOTTOM-LINE */
-.bottom-line { 
-    background-color: #444554; 
+.bottom-line {
+    background-color: #444554;
     color: #fff;
     float: bottom;
   }
 
-  .bottom-line p { 
+  .bottom-line p {
     margin-left: 2%;
   }
 
@@ -329,7 +332,7 @@ html, body {
     font-weight:lighter;
   }
 
-  input[type=radio]{ 
+  input[type=radio]{
     padding: 4px;
     border: 1px solid #ccc;
     margin-top: 6px;
@@ -380,7 +383,7 @@ html, body {
     margin-left: 25%;
     margin-right: auto;
   }
-  
+
   .createOne-centered{
     text-align: center;
     padding-top: 10px;
@@ -396,7 +399,7 @@ html, body {
     font-size:120%;
     color:#31475E;
     padding:.5em;
-    text-align:center; 
+    text-align:center;
     text-decoration: none;
   }
   .navLinks a:hover{
