@@ -22,3 +22,85 @@
    padding: 0 5px;
    
 }
+
+.schedule {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .schedule-header {
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .schedule-header h2 {
+    color: #333;
+    font-size: 28px;
+    margin: 0;
+  }
+  
+  .schedule-body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .schedule-expert {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .expert-img {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+  }
+  
+  .schedule-form {
+    flex: 2;
+    margin-left: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input[type="date"],
+  input[type="time"] {
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+  }
+  
+  .schedule-btn {
+    background-color: #7d8cc4;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+  }
+  
+  .schedule-btn:hover {
+    background-color: #5c6db1;
+  }
+  
