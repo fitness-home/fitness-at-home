@@ -25,6 +25,8 @@ import {ReportComponent} from "./progress/report/report.component";
 import {AppointmentComponent} from "./appointment/appointment.component";
 import {PlanComponent} from "./plan/plan.component";
 import {ExpertLocationComponent} from "./expert/expert-location/expert-location.component";
+import { PlangeneratorComponent } from './plangenerator/plangenerator.component';
+import { ShowplansComponent } from './plangenerator/showplans/showplans.component';
 
 const routes: Routes = [
   {path: "", component: LandingComponent},
@@ -50,7 +52,9 @@ const routes: Routes = [
   {path: "consent", component: ConsentFormComponent},
   {path: "adminDiet", component: AdminDietComponent},
   {path: "adminExercise", component:AdminExerciseComponent},
-  {path: "report", component: ReportComponent}
+  {path: "report", component: ReportComponent},
+  {path: "plan/generator", component: PlangeneratorComponent},
+  {path: "plan/show", component: ShowplansComponent}
 ];
 
 @NgModule({

@@ -1,0 +1,25 @@
+<div class="accordion border border-danger border-5 rounded bg-dark" id="accordionExample">
+
+    <div class="accordion-item" *ngFor="let recipe of recipes; let i = index" [attr.data-index]="i">
+        <h2 class="accordion-header" [attr.id]="'heading' + i">
+            <button class="accordion-button" type="button" [attr.data-bs-toggle]="'collapse'"
+                [attr.data-bs-target]="'#collapse' + i" [attr.aria-controls]="'collapse' + i">
+                Recipe {{i + 1}}: {{remove(recipe.name)}} <button type="button" class="btn ms-5 btn-danger text-end btn-sm">Calories: {{recipe.nutrients.caloriesKCal}}</button>
+            </button>
+        </h2>
+        <div [attr.id]="'collapse' + i" class="accordion-collapse collapse" [attr.aria-labelledby]="'heading' + i"
+            [attr.data-bs-parent]="'#accordionExample'">
+            <div class="accordion-body">
+                <p><strong>Description</strong>: {{customizedesc(recipe.description)}}</p>
+                <div>
+                    <button *ngFor="let tag of recipe.tags" type="button" [ngClass]="getButtonClass(tag)"
+                        class="me-1 mb-1 btn btn-sm">{{tag}}</button>
+                </div>
+                <p class="mt-1"><strong>Recipe</strong>:
+                    <code><ul><li *ngFor="let step of recipe.steps">{{step}}</li></ul></code></p>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <p>Total exercises: {{exercises.length}}</p> -->

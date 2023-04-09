@@ -1,0 +1,81 @@
+<div class="container mt-4 mb-4" style="max-width: 55%;">
+    <div *ngIf="showForm == 'form'" class="mx-0 mx-sm-auto border border-dark rounded">
+        <div class="card">
+            <div class="card-header">
+                <div class="text-center">
+                    <img src="../../assets/workout-thumbnail.jpg" width="100%" />
+
+                    <h3 style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"
+                        class="mt-2">
+                        Let's create a workout plan and diet plan for you with some little information</h3>
+
+                </div>
+            </div>
+            <div class="card-body">
+
+
+                <hr />
+
+                <form class="px-4" (ngSubmit)="onSubmitClick()">
+
+                    <div [@fadeAnimation] class="mb-3">
+                        <label for="currentWeight" class="form-label">Enter your current weight (in Kg):</label>
+                        <input required type="number" class="form-control" id="currentWeight" placeholder="## Kg"
+                            [(ngModel)]="weight" name="weight" (input)="showgoalweight()" [@slideInAnimation]>
+                    </div>
+                    <div *ngIf="showgoalweightFlag" [@fadeAnimation] class="mb-3">
+                        <label for="goalweight" class="form-label">Enter your target weight (in Kg):</label>
+                        <input required type="number" class="form-control" id="goalweight" placeholder="## Kg"
+                            [(ngModel)]="goalweight" name="goalweight" (input)="showage()" [@slideInAnimation] />
+                    </div>
+                    <div *ngIf="showageFlag" [@fadeAnimation] class="mb-3">
+                        <label for="age" class="form-label">Enter your Age:</label>
+                        <input required type="number" class="form-control" id="age" [(ngModel)]="age"
+                            (input)="showgender()" name="age" [@slideInAnimation] />
+                    </div>
+                    <div *ngIf="showgenderFlag" [@fadeAnimation] class="mb-3">
+                        <label for="gender" class="form-label">Please select your gender:</label>
+                        <select name="gender" required class="form-select" aria-label="Default select example" id="gender"
+                            [(ngModel)]="gender" (input)="showheight()" [@slideInAnimation]>
+                            <option selected>Select the Gender</option>
+                            <option value="male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="NA">Prefer not to say</option>
+                        </select>
+                    </div>
+                    <div *ngIf="showheightFlag" [@fadeAnimation] class="mb-2">
+                        <label for="height" class="form-label">Enter your height (in cm):</label>
+                        <input required type="number" class="form-control" id="height" [(ngModel)]="height"
+                            [@slideInAnimation] name="height" (input)="showExercisesFlag()" />
+                    </div>
+                    <div *ngIf="showExerciseFlag" [@fadeAnimation] class="mb-3">
+                        <label for="exerciseCategory" class="form-label">What type of exercises you most like:</label>
+                        <select name="exerciseCategory" required class="form-select" aria-label="Default Exercise Category" id="exerciseCategory"
+                            [(ngModel)]="exerciseCategory" [@slideInAnimation]>
+                            <option selected>Select the Category</option>
+                            <option value="cardio">Cardio (most liked)</option>
+                            <option value="olympic_weightlifting">Olympic weightlifting</option>
+                            <option value="plyometrics">Jump Training (Intense)</option>
+                            <option value="powerlifting">Power Lifting</option>
+                            <option value="strength">Strength</option>
+                            <option value="stretching">Stretching</option>
+                        </select>
+                    </div>
+                    <div class="card-footer text-end">
+                        <button type="submit" class="btn btn-danger" [disabled]="!weight || !goalweight || !age || gender === 'Select the Gender' || !height || exerciseCategory === 'Select the Category'">Submit</button>
+                        <!-- <button type="submit" class="btn btn-danger">Submit</button> -->
+                    </div>
+                </form>
+                <hr />
+
+            </div>
+            
+        </div>
+    </div>
+    <div *ngIf="showForm == 'loading'">
+        <app-loading></app-loading>
+    </div>
+    <div *ngIf="showForm == 'showplans'">
+        <app-showplans [weight]="weight" [goalweight]="goalweight" [age]="age" [gender]="gender" [lunch]="lunch" [height]="height" [exerciseCategory]="exerciseCategory" ></app-showplans>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="accordion border border-danger border-5 rounded bg-dark" id="accordionExample">
+    <h1 class="display-1 fw-bold text-center text-uppercase">Exercises</h1>
+
+    <div class="accordion-item" *ngFor="let exercise of exercises; let i = index" [attr.data-index]="i">
+        <h2 class="accordion-header" [attr.id]="'heading' + i">
+            <button class="accordion-button" type="button" [attr.data-bs-toggle]="'collapse'"
+                [attr.data-bs-target]="'#collapse' + i" [attr.aria-controls]="'collapse' + i">
+                Exercise {{i + 1}}: {{exercise.name}}
+            </button>
+        </h2>
+        <div [attr.id]="'collapse' + i" class="accordion-collapse collapse" [attr.aria-labelledby]="'heading' + i"
+            [attr.data-bs-parent]="'#accordionExample'">
+            <div class="accordion-body">
+                <p><strong>Difficulty</strong>: {{exercise.difficulty}}</p>
+                <p><strong>Muscle Trained</strong>: {{exercise.muscle}}</p>
+                <p style="font-size: medium;"><strong>Instructions</strong>:
+                    <code><pre>{{customize(exercise.instructions)}}</pre></code>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <p>Total exercises: {{exercises.length}}</p> -->

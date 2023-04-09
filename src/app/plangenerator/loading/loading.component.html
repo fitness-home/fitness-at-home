@@ -1,0 +1,19 @@
+<div class="container mt-auto mb-auto mt-8 text-center ms-auto me-auto" style="min-height: 350px;">
+  <div class="d-flex align-items-center mt-4">
+    <div class="spinner-border ml-auto text-success"></div>
+    <div><strong style="font-size: medium;" class="ps-5">Creating a fitness chart for you...</strong><br></div>
+
+
+  </div>
+  <div *ngIf="dietplanshow" class="d-flex align-items-center mt-4">
+    <div class="spinner-border ml-auto text-success"></div>
+    <div><strong style="font-size: medium;" class="ps-5">Creating a diet plan for you...</strong><br></div>
+
+
+  </div>
+  <div *ngIf="exerciseplanshow"  class="d-flex align-items-center mt-4">
+
+    <div class="spinner-border ml-auto text-success"></div>
+    <div><strong style="font-size: medium;" class="bg-info ps-5 text-success">Creating a exercise plan for you...</strong></div>
+  </div>
+</div>
