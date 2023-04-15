@@ -35,7 +35,10 @@
               "src/styles.scss"
             ],
             "scripts": [
-              "src/assets/chat-widget.js"
+              "src/assets/chat-widget.js",
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+
             ]
           },
           "configurations": {

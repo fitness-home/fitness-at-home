@@ -1,13 +1,40 @@
 <body>
-<div class="container-intro">
-  <h1>Hi {{userName | titlecase}}!!</h1>
-  <p>Welcome to Fitness@Home App. Here is your personalised plan</p>
-  <p><span>Instruction: </span>Below is a list of customised exercise plan.
-    Click "Completed when you complete the exercise for the day.</p>
-  <br><br>
-  <div class="algn">
-    <div routerLink="/dietPlan" class="base">CUSTOMISED DIET PLAN</div>
-    <div routerLink="/exercisePlan" class="base">CUSTOMISED EXERCISE PLAN</div>
+  <div class="container text-center">
+    <h1>Hi {{userName | titlecase}}!!</h1>
+    <p>Welcome to Fitness@Home App. Here is your personalised plan based on the data provided.</p>
+    <p>
+    <br>
+
+    <div  class="mb-3">
+      <label for="currentWeight" class="form-label">Your current weight (in Kg):</label>
+      <input readonly type="number" class="form-control" id="currentWeight" placeholder="## Kg" [(ngModel)]="weight"
+        name="weight" value="weight" >
+    </div>
+    <div  class="mb-3">
+      <label for="goalweight" class="form-label">Your target weight (in Kg):</label>
+      <input readonly type="number" class="form-control" id="goalweight" placeholder="## Kg" [(ngModel)]="goalweight"
+        name="goalweight"  />
+    </div>
+    <div   class="mb-3">
+      <label for="age" class="form-label">Your Age:</label>
+      <input readonly type="number" class="form-control" id="age" [(ngModel)]="age" name="age"
+         />
+    </div>
+    <div  class="mb-3">
+      <label for="gender" class="form-label">Your gender:</label>
+      <input name="gender" readonly class="form-control" aria-label="Default select example" id="gender"
+        [(ngModel)]="gender" />
+    </div>
+    <div  class="mb-2">
+      <label for="height" class="form-label">Your height (in cm):</label>
+      <input readonly type="number" class="form-control" id="height" [(ngModel)]="height" 
+        name="height"  />
+    </div>
+    <div class="algn">
+      <div routerLink="/dietPlan" class="base">GET YOUR CUSTOMISED DIET PLAN HERE</div>
+      <div routerLink="/exercisePlan" class="base">GET YOUR CUSTOMISED EXERCISE PLAN HERE</div>
+    </div>
+
+    <div class="mt-2"> Note: If you want to get a new customized diet plan, click on <a routerLink="/generator" >Fitness Plan Genrator</a></div>
   </div>
-</div>
 </body>

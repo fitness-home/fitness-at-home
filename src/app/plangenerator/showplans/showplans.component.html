@@ -1,0 +1,41 @@
+<div class="container mt-4 mb-4" style="max-width: 100%; border-style: solid;">
+    <div class="mx-0 mx-sm-auto border border-dark rounded">
+        <h1 class="display-1 fw-bold text-center text-uppercase">Fitness Chart</h1><strong class="text-medium"> Report generated for <code>{{user}}</code></strong>
+        <p><br><br>We believe that a healthy lifestyle starts with a balanced diet and regular exercise. That's why we've
+            created this report that provides you with all the resources you need to achieve your fitness goals.</p>
+        <p>The recipes are nutritious, easy to make, and cater to a range of dietary requirements. We have options for
+            vegetarian, vegan, gluten-free, and other dietary preferences.</p>
+        <strong>Try our recipes and exercises and see the result in 2-3 months! All the best</strong>
+        <button class="ms-3 btn btn-info" onclick="window.print()">Print this whole report</button>
+        <hr>
+        <div class="d-flex justify-content-between">
+            <button class="btn btn-danger me-2">Your current BMI is {{this.bmi}}</button>
+            <span style="font-size: 84px; margin: 0 10px;">→</span>
+            <button class="btn btn-success ms-2">Your target goal BMI is {{this.targetbmi}}</button>
+          </div>
+          <p class="mt-1">Based on your weight loss goals and data provided, you need to limit your <b>daily intake calories</b> to <b>{{this.caloriesintake}}</b></p>
+        <hr>
+        <app-exercises [exercises]="exercises"></app-exercises>
+        <hr>
+        <h1 class="display-1 fw-bold text-center text-uppercase">Recipes</h1>
+
+        <h3 style="font-family: cursive;">Breakfast:</h3>
+        <app-recipes [recipes]="breakfast"></app-recipes>
+        <hr>
+
+        <h3 style="font-family: cursive;">Lunch:</h3>
+        <app-recipes [recipes]="lunch"></app-recipes>
+        <hr>
+        <hr>
+
+        <h3 style="font-family: cursive;">Dinner:</h3>
+        <app-recipes [recipes]="dinner"></app-recipes>
+        <hr>
+        <!--         
+        <h3 style="font-family: cursive;">Dinner:</h3>
+        <app-recipes [recipes]="dinner"></app-recipes>
+        <hr> -->
+
+
+    </div>
+</div>

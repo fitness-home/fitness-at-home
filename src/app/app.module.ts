@@ -25,6 +25,11 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSelectModule} from "@angular/material/select";
 import { PlanComponent } from './plan/plan.component';
+import { PlangeneratorComponent } from './plangenerator/plangenerator.component';
+import { LoadingComponent } from './plangenerator/loading/loading.component';
+import { ShowplansComponent } from './plangenerator/showplans/showplans.component';
+import { ExercisesComponent } from './plangenerator/showplans/exercises/exercises.component';
+import { RecipesComponent } from './plangenerator/showplans/recipes/recipes.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +44,12 @@ import { PlanComponent } from './plan/plan.component';
     ProgressComponent,
     ReportComponent,
     AppointmentComponent,
-    PlanComponent],
+    PlanComponent,
+    PlangeneratorComponent,
+    LoadingComponent,
+    ShowplansComponent,
+    ExercisesComponent,
+    RecipesComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
