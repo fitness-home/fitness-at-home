@@ -26,6 +26,13 @@ export class RecipesComponent implements OnInit {
     this.random = Math.floor(Math.random() * 10) + 1;
   }
 
+  calories(text:string){
+    return Number.parseInt(text);
+  }
+  generateRandomNumber(): number {
+    return Math.floor(Math.random() * 10) + 1; // generates a random number between 1 and 10
+  }
+
   remove(text: string) {
     return text.replace("Keto", "");
   }

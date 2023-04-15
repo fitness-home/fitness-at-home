@@ -39,11 +39,11 @@ export class PlangeneratorComponent implements OnInit {
   gender?: string;
   height?: number;
   exerciseCategory?: string;
-  showgoalweightFlag: boolean = false;
-  showageFlag: boolean = false;
-  showgenderFlag: boolean = false;
-  showheightFlag: boolean = false;
-  showExerciseFlag: boolean = false;
+  showgoalweightFlag: boolean = true;
+  showageFlag: boolean = true;
+  showgenderFlag: boolean = true;
+  showheightFlag: boolean = true;
+  showExerciseFlag: boolean = true;
 
   showForm = 'form';
 
@@ -79,21 +79,30 @@ export class PlangeneratorComponent implements OnInit {
     // this.age = 0;
     // this.gender = "";
     // this.height = 0;
+    
   }
 
   ngOnInit(): void {
     this.fadeAnimation = false;
-
+    let user =localStorage.getItem("user");
+    console.log(user);
+    this.planService.getUserInfo(user).subscribe((res: any) =>  {
+      this.weight = res?.weight;
+      this.goalweight = res?.targetWeightGoal;
+      this.height = res?.height * 30.48;
+      this.age = res?.age;
+      this.gender = res?.gender;
+    });
   }
 
-  lunch? : any;
+  // lunch? : any;
   
   onSubmitClick() {
     console.log(this.weight);
     this.showForm = 'loading';
-    this.planService.getRecipes("lunch",7).subscribe((res) => {
-      this.lunch=res;
-    });
+    // this.planService.getRecipes("lunch",7).subscribe((res) => {
+    //   this.lunch=res;
+    // });
     setTimeout(() => {
       this.showForm = 'showplans';
 

@@ -53,7 +53,7 @@ const routes: Routes = [
   {path: "adminDiet", component: AdminDietComponent},
   {path: "adminExercise", component:AdminExerciseComponent},
   {path: "report", component: ReportComponent},
-  {path: "plan/generator", component: PlangeneratorComponent},
+  {path: "generator", component: PlangeneratorComponent},
   {path: "plan/show", component: ShowplansComponent}
 ];
 

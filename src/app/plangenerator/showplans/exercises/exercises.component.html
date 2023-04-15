@@ -1,5 +1,10 @@
 <div class="accordion border border-danger border-5 rounded bg-dark" id="accordionExample">
     <h1 class="display-1 fw-bold text-center text-uppercase">Exercises</h1>
+    <blockquote class="blockquote">
+        <p>These exercises are recommended by our system to aid your weight loss journey. </p>
+        <footer class="blockquote-footer">Make this as mandatory 3 exercises for your day and see the results :).
+        </footer>
+    </blockquote>
 
     <div class="accordion-item" *ngFor="let exercise of exercises; let i = index" [attr.data-index]="i">
         <h2 class="accordion-header" [attr.id]="'heading' + i">
@@ -11,11 +16,19 @@
         <div [attr.id]="'collapse' + i" class="accordion-collapse collapse" [attr.aria-labelledby]="'heading' + i"
             [attr.data-bs-parent]="'#accordionExample'">
             <div class="accordion-body">
-                <p><strong>Difficulty</strong>: {{exercise.difficulty}}</p>
-                <p><strong>Muscle Trained</strong>: {{exercise.muscle}}</p>
-                <p style="font-size: medium;"><strong>Instructions</strong>:
-                    <code><pre>{{customize(exercise.instructions)}}</pre></code>
-                </p>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <img src="{{exercise.image}}" style="max-width: 100%; height: auto;" />
+                        </div>
+                        <div class="col-sm-3 mt-2">
+                            <p style="font-size: medium;"><strong>Description</strong>:
+                                <strong>{{exercise.description}}</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
 
             </div>
         </div>

@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import {environment} from "../../environments/environment";
 
 @Injectable({
   providedIn: 'root'
@@ -29,5 +30,17 @@ export class PlangenServiceService {
 
   getRecipes(timing: string, quanitity:number): Observable<Object> {
     return this.http.get(`https://low-carb-recipes.p.rapidapi.com/search?maxCalories=600&maxNetCarbs=5&maxSugar=3&maxAddedSugar=0&limit=${quanitity}&tags=`+timing, { headers: this.rapidHeaders });
+  }
+
+  getUserInfo(user: any): Observable<Object> {
+    return this.http.get(`${environment.apiUrl}/question/user/`+user);
+  }
+
+  getDietList(): Observable<Object> {
+    return this.http.get(`${environment.apiUrl}/diet`);
+  }
+
+  getExerciseList(): Observable<Object> {
+    return this.http.get(`${environment.apiUrl}/exercise`);
   }
 }

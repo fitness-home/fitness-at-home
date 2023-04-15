@@ -1,4 +1,4 @@
-<div class="container mt-4 mb-4" style="max-width: 55%;">
+<div class="container mt-4 mb-4" style="max-width: 100vh;">
     <div *ngIf="showForm == 'form'" class="mx-0 mx-sm-auto border border-dark rounded">
         <div class="card">
             <div class="card-header">
@@ -10,6 +10,7 @@
                         Let's create a workout plan and diet plan for you with some little information</h3>
 
                 </div>
+                <div class="blockquote">You can create as many customized diet plan as you want by filling this form!</div>
             </div>
             <div class="card-body">
 
@@ -21,7 +22,7 @@
                     <div [@fadeAnimation] class="mb-3">
                         <label for="currentWeight" class="form-label">Enter your current weight (in Kg):</label>
                         <input required type="number" class="form-control" id="currentWeight" placeholder="## Kg"
-                            [(ngModel)]="weight" name="weight" (input)="showgoalweight()" [@slideInAnimation]>
+                            [(ngModel)]="weight" name="weight" value="weight" (input)="showgoalweight()" [@slideInAnimation]>
                     </div>
                     <div *ngIf="showgoalweightFlag" [@fadeAnimation] class="mb-3">
                         <label for="goalweight" class="form-label">Enter your target weight (in Kg):</label>
@@ -76,6 +77,6 @@
         <app-loading></app-loading>
     </div>
     <div *ngIf="showForm == 'showplans'">
-        <app-showplans [weight]="weight" [goalweight]="goalweight" [age]="age" [gender]="gender" [lunch]="lunch" [height]="height" [exerciseCategory]="exerciseCategory" ></app-showplans>
+        <app-showplans [weight]="weight" [goalweight]="goalweight" [age]="age" [gender]="gender" [height]="height" [exerciseCategory]="exerciseCategory" ></app-showplans>
     </div>
 </div>
