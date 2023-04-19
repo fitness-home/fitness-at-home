@@ -22,4 +22,11 @@ export class AuthService {
   login(user: any): Observable<Object> {
     return this.http.post(`${environment.apiUrl}/user/login`, user);
   }
+
+  isAuthenticated() {
+    if(localStorage.getItem("user"))
+      return true
+    else
+      return false
+  }
 }

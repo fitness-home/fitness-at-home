@@ -1,11 +1,10 @@
 .schedule{
     background-color: gainsboro;
     width: 35%;
-    height: 55vh;
     margin: auto;
     margin-top: 4%;
     text-align: center;
-    padding: 2% 0 0 0;
+    padding: 2% 0 2% 0;
 }
 .update{
     display: flex;
@@ -28,4 +27,10 @@
 }
 .w-70 {
   width: 70%;
+}
+.button {
+  background-color: #4CAF50;
+}
+.p-20 {
+  padding: 0px 20px 0px 20px;
 }

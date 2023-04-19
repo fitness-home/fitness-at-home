@@ -1,7 +1,7 @@
 .about {
     display: flex;
-    background-color:rgba(112, 245, 232, 0.797);
-    height:500px;
+    background-color:rgb(209 214 213 / 80%);
+    height:400px;
 margin: 50px 20px;
 justify-content: left;
 align-self: center;
@@ -10,16 +10,29 @@ box-sizing: content-box;
 
 }
 .aboutpart1 {
-    display: flex;
-    background-color: rgba(241, 119, 180, 0.766);
+
     height:600px;
 margin: 10px 20px;
 align-self: center;
 box-sizing: content-box;
 text-align: center;
-justify-content: center;
 align-items: center;
-
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: block;
+  }
+  li {
+    display: block;
+    list-style-type: none;
+    margin-bottom: 10px;
+    font-size: 17px;
+    &::before {
+      content: '';
+      margin-right: 10px;
+    }
+  }
 }
 
 .content{
@@ -32,27 +45,35 @@ align-items: center;
     line-height: 2;
     height: 100px;
     width: 50%;
+}
+.colour {
 
 }
 .img{
-width: 250px;
-height: 150px;
+width: 525px;
+height: 300px;
 margin-left: 40px;
 margin-top: 30px;
+  img {
+    height: inherit;
+    width: inherit;
+  }
+}
+.fnt {
+  font-size: 20px;
 }
 
-
 .image{
-    display: flex;
-     padding: 1%;
-    height: auto;
-     width: 100%;
-     text-align: right;
-     justify-content: right;
-     align-items: right;
-
-     margin: auto;
-     margin-top: 20px;
-
-
+     text-align: left;
+     justify-content: left;
+  height: 100px;
  }
+
+.catchyMsg {
+  margin: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+.p-80 {
+  padding: 80px;
+}
