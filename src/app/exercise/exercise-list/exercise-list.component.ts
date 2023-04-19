@@ -44,11 +44,11 @@ export class ExerciseListComponent implements OnInit {
   onAddToPlan(id: any) {
     let data= {"exercise": id, "user": this.user};
     this.exerciseService.onUpdatePlan(data).subscribe((res: any) =>  {
-      debugger
-      console.log(res);
       if(res) {
-        this.router.navigate(['exercisePlan']);
+        this.router.navigate(['plan']);
       }
+    }, error => {
+      alert(error.error);
     })
   }
 }

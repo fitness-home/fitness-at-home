@@ -36,7 +36,7 @@ const routes: Routes = [
   {path: "exercise", component: ExerciseListComponent},
   {path: "exercisePlan", component: ExercisePlanComponent},
   {path: "expert", component: ExpertListComponent},
-  {path: "expertDetail", component: ExpertDetailComponent},
+  {path: "expertDetail/:id", component: ExpertDetailComponent},
   {path: "expertLocation", component: ExpertLocationComponent},
   {path: "appointment", component: AppointmentComponent},
   {path: "about", component: AboutComponent},
@@ -47,7 +47,7 @@ const routes: Routes = [
   {path: "survey5", component: Survey5Component},
   {path: "survey6", component: Survey6Component},
   {path: "progress", component: ProgressComponent},
-  {path: "consent", component: ConsentFormComponent},
+  {path: "consent/:id", component: ConsentFormComponent},
   {path: "adminDiet", component: AdminDietComponent},
   {path: "adminExercise", component:AdminExerciseComponent},
   {path: "report", component: ReportComponent}

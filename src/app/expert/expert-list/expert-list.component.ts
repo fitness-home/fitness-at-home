@@ -17,7 +17,6 @@ export class ExpertListComponent implements OnInit {
   onGetDietList() {
     this.expertService.getExpertList().subscribe((res) =>  {
       this.expertList = res;
-      console.log("diet", this.expertList);
     })
   }
 
