@@ -1,36 +1,41 @@
-
 <div class="generate-PR">
     <div>
-    <h2>GENERATE PROGRESS REPORT</h2>
+        <h2>GENERATE PROGRESS REPORT</h2>
     </div>
-  <div>
-    <form #progress="ngForm" (ngSubmit)="onAddProgress(progress)">
-      <div class="update">
-        <div class="update">
-          <label for="weight">Add current Weight?</label><br>
-          <input type="text" name="weight" ngModel id="weight" placeholder="add weight" />
-        </div>
-        <div>
-          <label for="exercise">Did you follow exercise?</label><br>
-          <input type="text" name="FollowExercise" ngModel id="exercise" placeholder=" Answer in Yes or No " /><br/>
-        </div>
-        <div>
-          <label for="diet">Did you follow diet?</label><br>
-          <input type="text" id="diet" name="FollowDiet" ngModel placeholder=" Answer in Yes or No " /><br/>
-        </div>
-        <div>
-          <label for="time">How many time you did Exercise?</label><br>
-          <input type="text" id="diet2" name="FollowDiet" ngModel placeholder="Answer in Yes or No" /><br/>
-        </div>
-        <div>
-          <label for="time"> How many time you did Exercise in week?</label><br>
+    <div>
+        <form #progress="ngForm" (ngSubmit)="onAddProgress(progress)">
+            <div class="update">
+                <div class="update">
+                    <label for="weight">Add current Weight?</label><br>
+                    <select name="weight" ngModel id="weight">
+          <option *ngFor="let weight of weights" [value]="weight">{{ weight }} kg</option>
+        </select>
+                </div>
+                <div>
+                    <label for="exercise">Did you follow exercise?</label><br>
+                    <select name="FollowExercise" ngModel id="exercise">
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+                </div>
+                <div>
+                    <label for="diet">Did you follow your diet plan?</label><br>
+                    <select name="FollowDiet" ngModel id="diet">
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+                </div>
+                <div>
+                    <label for="exercise-time">How many times did you exercise?</label><br>
+                    <select name="ExerciseTime" ngModel id="exercise-time">
+          <option *ngFor="let frequency of exerciseFrequencies" [value]="frequency">{{ frequency }} times a week</option>
+        </select>
+                </div>
 
-          <input type="text"  id="time" name="ExerciseTime" ngModel placeholder="How many times you followed " /><br/>
-          <br/>
-          <button type="submit">GENERATE</button>
-        </div>
+            </div>
+            <br>
+            <button type="submit">GENERATE</button>
+
+        </form>
     </div>
-  </form>
-  </div>
 </div>
-

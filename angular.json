@@ -111,5 +111,8 @@
       }
     }
   },
-  "defaultProject": "fitness-at-home"
+  "defaultProject": "fitness-at-home",
+  "cli": {
+    "analytics": false
+  }
 }
