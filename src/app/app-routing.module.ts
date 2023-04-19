@@ -25,20 +25,21 @@ import {ReportComponent} from "./progress/report/report.component";
 import {AppointmentComponent} from "./appointment/appointment.component";
 import {PlanComponent} from "./plan/plan.component";
 import {ExpertLocationComponent} from "./expert/expert-location/expert-location.component";
+import {AuthGuard} from "./auth/auth.guard";
 
 const routes: Routes = [
   {path: "", component: LandingComponent},
-  {path: "signup", component: RegistrationComponent},
+  {path: "signup",  component: RegistrationComponent},
   {path: "signin", component: SigninComponent},
-  {path: "diet", component: DietListComponent},
-  {path: "plan", component: PlanComponent},
-  {path: "dietPlan", component: DietPlanComponent},
-  {path: "exercise", component: ExerciseListComponent},
-  {path: "exercisePlan", component: ExercisePlanComponent},
-  {path: "expert", component: ExpertListComponent},
-  {path: "expertDetail/:id", component: ExpertDetailComponent},
-  {path: "expertLocation", component: ExpertLocationComponent},
-  {path: "appointment", component: AppointmentComponent},
+  {path: "diet", canActivate: [AuthGuard], component: DietListComponent},
+  {path: "plan",canActivate: [AuthGuard], component: PlanComponent},
+  {path: "dietPlan", canActivate: [AuthGuard], component: DietPlanComponent},
+  {path: "exercise", canActivate: [AuthGuard], component: ExerciseListComponent},
+  {path: "exercisePlan",canActivate: [AuthGuard], component: ExercisePlanComponent},
+  {path: "expert", canActivate: [AuthGuard], component: ExpertListComponent},
+  {path: "expertDetail/:id", canActivate: [AuthGuard], component: ExpertDetailComponent},
+  {path: "expertLocation", canActivate: [AuthGuard], component: ExpertLocationComponent},
+  {path: "appointment", canActivate: [AuthGuard], component: AppointmentComponent},
   {path: "about", component: AboutComponent},
   {path: "survey", component: Survey1Component},
   {path: "survey2", component: Survey2Component},
@@ -46,11 +47,11 @@ const routes: Routes = [
   {path: "survey4", component: Survey4Component},
   {path: "survey5", component: Survey5Component},
   {path: "survey6", component: Survey6Component},
-  {path: "progress", component: ProgressComponent},
-  {path: "consent/:id", component: ConsentFormComponent},
-  {path: "adminDiet", component: AdminDietComponent},
-  {path: "adminExercise", component:AdminExerciseComponent},
-  {path: "report", component: ReportComponent}
+  {path: "progress", canActivate: [AuthGuard], component: ProgressComponent},
+  {path: "consent/:id", canActivate: [AuthGuard], component: ConsentFormComponent},
+  {path: "adminDiet", canActivate: [AuthGuard], component: AdminDietComponent},
+  {path: "adminExercise",canActivate: [AuthGuard], component:AdminExerciseComponent},
+  {path: "report",canActivate: [AuthGuard], component: ReportComponent}
 ];
 
 @NgModule({
