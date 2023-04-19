@@ -45,7 +45,7 @@ export class ExerciseListComponent implements OnInit {
     let data= {"exercise": id, "user": this.user};
     this.exerciseService.onUpdatePlan(data).subscribe((res: any) =>  {
       if(res) {
-        this.router.navigate(['exercisePlan']);
+        this.router.navigate(['plan']);
       }
     }, error => {
       alert(error.error);

@@ -16,4 +16,8 @@ export class ExpertService {
   connectExpert(data: any):  Observable<Object> {
     return this.http.post(`${environment.apiUrl}/experts/connect`, data);
   }
+
+  appointment(data: any): Observable<Object> {
+    return this.http.post(`${environment.apiUrl}/appointment`, data);
+  }
 }
