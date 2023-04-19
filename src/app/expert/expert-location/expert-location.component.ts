@@ -5,7 +5,7 @@ import {DomSanitizer} from "@angular/platform-browser";
 @Component({
   selector: 'app-expert-location',
   template:`
-    <iframe [src]="getSafeUrl(src)"></iframe>
+    <iframe class="loc" [src]="getSafeUrl(src)"></iframe>
   `,
   styleUrls: ['./expert-location.component.scss']
 })

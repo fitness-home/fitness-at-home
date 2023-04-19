@@ -1,7 +1,6 @@
 .generate-PR{
     background-color: gainsboro;
     width: 35%;
-    height: 550px;
     margin: auto;
     margin-top: 4%;
     text-align: center;
@@ -23,12 +22,12 @@
    background-color: rgb(247, 241, 241);
    border: none;
    padding: 0 5px;
-   
+
 }
 .generate-PR label {
    // display: flex;
    margin-left: 10px;
-   
+
 }
 
 
@@ -51,6 +50,6 @@ p>a{
 }
 .generate-PR button{
     height: 30px;
-    margin-bottom: 500px;
-    background-color: green;
+    margin-bottom: 50px;
+    background-color: #4CAF50;
 }
