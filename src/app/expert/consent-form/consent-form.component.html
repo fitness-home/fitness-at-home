@@ -1,16 +1,12 @@
 
 
 <div class="base1 consent">
-
     <span class="mgp">
+      <form (ngSubmit)="sendEmail()" #myForm="ngForm">
       <h2>CONSENT FORM</h2>
-      <input type="checkbox" checked="checked">
-<label class="container"> I consent to share my details with selected expert
-  
- 
-</label>
-<br>
-      <input class="btn_proceed" type="submit" value="Submit" />
-
+      <input type="checkbox" name="isChecked" [(ngModel)]="isChecked">
+      <label class="container"> I consent to share my details with selected expert</label><br>
+      <input class="btn_proceed" type="submit"  value="Submit" />
+      </form>
     </span>
   </div>

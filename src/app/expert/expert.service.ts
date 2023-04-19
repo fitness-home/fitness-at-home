@@ -12,4 +12,8 @@ export class ExpertService {
   getExpertList(): Observable<Object> {
     return this.http.get(`${environment.apiUrl}/experts/all`);
   }
+
+  connectExpert(data: any):  Observable<Object> {
+    return this.http.post(`${environment.apiUrl}/experts/connect`, data);
+  }
 }
