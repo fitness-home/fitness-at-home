@@ -16,6 +16,7 @@ export class AppointmentComponent implements OnInit {
   expertList: any;
   selectedExpert: any = "";
   displayMessage: string = "";
+  errorMessage: string = "";
   constructor(public expertService: ExpertService) { }
 
   ngOnInit(): void {
@@ -30,6 +31,8 @@ export class AppointmentComponent implements OnInit {
   }
 
   addAppointment(formData: any) {
+    this.errorMessage = '';
+    this.displayMessage= '';
     if(formData?.value) {
      let data = {
        expert: formData.value.expert,
@@ -40,6 +43,8 @@ export class AppointmentComponent implements OnInit {
       this.expertService.appointment(data).subscribe((res:any) => {
         this.displayMessage = res?.message;
         formData.clear();
+      }, error => {
+        this.errorMessage = error.error.message;
       })
     }
   }
