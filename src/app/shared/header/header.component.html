@@ -7,7 +7,7 @@
       <a routerLink="signup">SIGN UP</a>
     </div>
     <div *ngIf="userName">
-      <a routerLink="signin">Hello, {{userName}}</a>
+      <a routerLink="signin">Hello, {{userName | titlecase}}</a>
       <span> | </span>
       <a (click)="onLogOut()">Logout</a>
     </div>

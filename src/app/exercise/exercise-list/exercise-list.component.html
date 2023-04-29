@@ -1,5 +1,5 @@
 <div class="content">
-  <h2>EXERCISE LIST</h2>
+  <h1>EXERCISE LIST</h1>
   <div class="search">
     <input type="text"  [(ngModel)]="searchValue" class="inpSearch" placeholder="Search..">
     <button type="submit" (click)="onSearch(searchValue)">Search</button>
@@ -10,8 +10,8 @@
      the your plan.we have the plan for you!-->
 
   <p>
-    Instruction statement:Below is the list of customized diet plan .Click
-    'Add to plan' if you wish to add in your exercise plan.
+    Instruction statement:Below is the list of customized diet plan. Click
+    'Add to plan' if you wish to add the exercise in your exercise plan.
   </p>
 </div>
 <div *ngFor="let exercise of exerciseList">

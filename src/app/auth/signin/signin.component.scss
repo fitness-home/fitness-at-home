@@ -22,17 +22,15 @@
 .member-login >div button{
     margin: 15px 0;
     width: 50%;
-    height: 40px;
-    border: gainsboro;
-    border-radius: 15px;
     font-weight:1000;
     font-size: 1.5em;
-    background-color: skyblue;
+    background-color: #4CAF50;
     cursor: pointer;
+    height: 40px;
+  padding-bottom: 7px;
 }
 .member-login >div button:hover{
-    background-color: rgb(173, 97, 245);
-    color: white;
+        background-color: #4CAF50;
 }
 .member-login a{
     color: black;

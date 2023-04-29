@@ -10,8 +10,7 @@ box-sizing: content-box;
 
 }
 .aboutpart1 {
-
-    height:600px;
+  height:450px;
 margin: 10px 20px;
 align-self: center;
 box-sizing: content-box;
@@ -66,13 +65,19 @@ margin-top: 30px;
 .image{
      text-align: left;
      justify-content: left;
-  height: 100px;
+     height: 100px;
+  img {
+    height: 350px;
+  }
  }
 
 .catchyMsg {
   margin: 20px;
   display: flex;
   justify-content: space-around;
+  .image1 img {
+    height: 500px;
+  }
 }
 .p-80 {
   padding: 80px;
